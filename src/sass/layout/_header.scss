@@ -1,0 +1,257 @@
+.li-ac {
+    color: #f26c81;
+}
+.header {
+    // height: 500px;
+    &__first-line {
+        font-size: 13px;
+        color: #777;
+        background: #edeef0;
+        min-height: 35px;
+        line-height: 35px;
+        a {
+            &:hover {
+                color: #585855;
+            }
+        }
+        .container {
+            @include clearfix;
+        }
+    }
+    &__second-line {
+        min-height: 150px;
+        background: #fdfdfd;
+        border-bottom: 1px solid #edeef0;
+        margin-bottom: 35px;
+        .container {
+            @include clearfix;
+        }
+    }
+    &__main-mnu {
+        .container {
+            max-width: 960px;
+        }
+    }
+}
+.first-mnu,
+.first-options {
+    li {
+        display: inline-block;
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.first-options {
+    margin-right: 115px;
+}
+.bag-wrapper {
+    .bag-info {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url(../img/bag.png);
+            width: 20px;
+            height: 18px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+.second {
+    &-left {
+        width: 18%;
+        .logo-wrap {
+            line-height: 150px;
+            img {
+                vertical-align: middle;
+            }
+            a {
+                display: block;
+            }
+        }
+    }
+    &-center {
+        padding: 40px 0;
+        .search-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        width: 64%;
+        // text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-weight: bold;
+        color: #222;
+        font-size: 18px;
+        .form-wrap {
+            position: relative;
+            &:hover {
+                .s-input {
+                    border: 1px solid #9bccc4;
+                }
+                .submit-btn {
+                    background-color: #dc5066;
+                    -webkit-box-shadow: -1px 0 7px 0 rgba(0,0,0,.2);
+                       -moz-box-shadow: -1px 0 7px 0 rgba(0,0,0,.2);
+                            box-shadow: -1px 0 7px 0 rgba(0,0,0,.2);
+                }
+            }
+        }
+        .search-form {
+            width: 75%;
+            margin: 0 auto;
+        }
+        .s-label {
+            display: block;
+        }
+        .s-input {
+            @include transition(.25s);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            width: 88%;
+            border: 1px solid #e3e4e8;
+            height: 35px;
+            padding-left: 18px;
+            color: #a9a9a9;
+            font-size: 15px;
+        }
+        .submit-btn {
+            @include transition(.25s);
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 66px;
+            height: 35px;
+            background: #f3697f;
+            background-image: url("../img/loupe.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .s-input::-webkit-input-placeholder {
+            color: #a9a9a9;
+            font-size: 15px;
+        }
+        .s-input::-moz-placeholder {
+            color: #a9a9a9;
+            font-size: 15px;
+        }/* Firefox 19+ */
+        .s-input:-moz-placeholder {
+            color: #a9a9a9;
+            font-size: 15px;
+        }/* Firefox 18- */
+        .s-input:-ms-input-placeholder {
+            color: #a9a9a9;
+            font-size: 15px;
+        }
+    }
+    &-right {
+        width: 18%;
+        .c-wrap {
+            padding: 22px 0;
+        }
+        text-align: center;
+        .telTo {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .work-title {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 13px;
+            color: #777;
+        }
+        .work-time {
+            color: #282828;
+            font-style: italic;
+        }
+    }
+}
+.mnu-wrapper {
+    ul {
+        width: 100%;
+        text-align: justify;
+        &:last-child:after {
+            content: "";
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}
+.mnu-item {
+    @include transition(.25s);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    width: 15%;
+    position: relative;
+    img {
+        width: 100px;
+        height: 60px;
+        margin-bottom: 5px;
+    }
+    a {
+        display: block;
+    }
+    &:hover {
+        color: #f46f84;
+    }
+    ul {
+        display: none;
+        @include border-radius(3px);
+        background: #fff;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+           -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+                box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+        position: absolute;
+        z-index: 200 !important;
+        font-size: 14px;
+        color: #4d4d4f;
+        width: 275px;
+        padding: 13px 0;
+        top: 107px;
+        left: 15px;
+        li {
+            @include transition(.25s);
+            line-height: 30px;
+            border-left: 2px solid transparent;
+            padding-left: 20px;
+            &:hover {
+                background: #f0f2f5;
+                border-left: 2px solid #f46f84;
+            }
+        }
+    }
+    &:last-child {
+        ul {
+            left: -160px;
+        }
+        &:after {
+            left: 80px;
+        }
+    }
+    &--active {
+        &:after {
+            content: "";
+            position: absolute;
+            background: url("../img/triangle.png");
+            background-repeat: no-repeat;
+            left: 45px;
+            bottom: -20px;
+            width: 28px;
+            height: 12px;
+            z-index: 200 !important;            
+        }
+    }
+}
