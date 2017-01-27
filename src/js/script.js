@@ -20,7 +20,7 @@ $( document ).ready(function() { // начало document.ready
         prevText:"",
         minSlides:1,
         maxSlides:4,
-        moveSlides:1
+        moveSlides:1,
     });
     $('.brands-slider').bxSlider({
         slideWidth: 80,
