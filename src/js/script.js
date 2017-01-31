@@ -22,6 +22,18 @@ $( document ).ready(function() { // начало document.ready
         maxSlides:4,
         moveSlides:1,
     });
+    $('.non-standard-slider').bxSlider({
+        slideWidth: 194,
+        slideMargin: 40,        
+        // infiniteLoop:!0,
+        hideControlOnEnd:!0,
+        pager:!1,
+        nextText:"",
+        prevText:"",
+        minSlides:1,
+        maxSlides:4,
+        moveSlides:1,
+    });
     $('.brands-slider').bxSlider({
         slideWidth: 80,
         slideMargin: 50,

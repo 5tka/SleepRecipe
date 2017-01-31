@@ -1,4 +1,3 @@
--var firstMnu = ['О нас','Нестандартные изделия','Доставка и оплата','Отзывы','Контакты']
 header.header
     .header__first-line
         .container
@@ -9,14 +8,21 @@ header.header
                             | Cравнения 
                             span (0)  	  
                     li
-                        a(href="#")
+                        a(href="fav-prod.html")
                             | Избранные 
                             span.li-ac (1)
             .first-mnu.fl-l
                 ul
-                    each item in firstMnu
-                        li
-                            a(href="#")= item
+                    li 
+                        a(href="about.html") О нас
+                    li 
+                        a(href="non-standard.html") Нестандартные изделия
+                    li 
+                        a(href="delivery.html") Доставка и оплата
+                    li 
+                        a(href="#") Отзывы
+                    li 
+                        a(href="#") Контакты
             .bag-wrapper.fl-r
                 a(href="#").bag-info
                     | Корзина 
