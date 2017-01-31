@@ -1,0 +1,146 @@
+.non-standard-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.non-standard-item {
+    display: inline-block;
+    width: 23%;
+    position: relative;
+    &:before {
+        position: absolute;
+        font-size: 18px;
+        color: #aaa;
+        top: 15px;
+        left: 20px;
+    }
+    &:nth-child(1) {
+        &:before {
+            content: "1";
+        }
+    }
+    &:nth-child(2) {
+        &:before {
+            content: "2";
+        }
+    }
+    &:nth-child(3) {
+        &:before {
+            content: "3";
+        }
+    }
+    &:nth-child(4) {
+        &:before {
+            content: "4";
+        }
+    }
+}
+.non-standard-img {
+    text-align: center;
+    border: 1px solid #e3e4e8;
+    height: 160px;
+    line-height: 160px;
+    margin-bottom: 20px;
+    img {
+        vertical-align: middle;
+    }
+}
+.non-standard-dscr {
+    p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+.non-standard-about {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    span {
+        font-size: 18px;
+        color: #222;
+        display: block;
+        margin-bottom: 18px;
+        text-align: left;
+    }
+    p {
+        color: #777;
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 15px;
+        &:nth-child(3) {
+            margin-bottom: 50px;
+        }
+    }
+    a {
+        margin-bottom: 45px;
+    }
+}
+.non-standard-exp {
+    position: relative;
+    margin-bottom: 85px;
+    .bx-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .bx-viewport {
+        height: 195px !important;
+        padding:  {
+            top: 5px;
+            left: 5px;
+            right: 5px;
+        }
+    }
+    .bx-prev {
+        @include transition(.25s);
+        position: absolute;
+        background: url("../img/leftS.png");
+        width: 60px;
+        height: 60px;
+        top: 0;
+        bottom: -60px;
+        margin: auto;
+        opacity: .7;
+        left: 0;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .bx-next {
+        position: absolute;
+        background: url("../img/leftS.png");
+        @include transition(.25s);
+        transform: rotate(-180deg);
+        width: 60px;
+        height: 60px;
+        top: 0;
+        bottom: -60px;
+        margin: auto;
+        right: 0;
+        opacity: .7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+.non-standard-slider {
+    @include clearfix;
+    .ns-img {
+        img {
+            max-width: 200px;
+            height: 150px;
+        }
+    }
+    .ns-dscr {
+        .t {
+            font-size: 13px;
+            color: #222;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .st {
+            color: #a7adb7;
+            display: block;
+            font-size: 13px;
+        }
+    }
+}

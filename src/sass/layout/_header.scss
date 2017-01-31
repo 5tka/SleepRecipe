@@ -183,13 +183,13 @@
 }
 .mnu-wrapper {
     ul {
-        width: 100%;
-        text-align: justify;
-        &:last-child:after {
-            content: "";
-            width: 100%;
-            display: inline-block;
-        }
+        
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
     }
 }
 .mnu-item {
@@ -211,6 +211,7 @@
         color: #f46f84;
     }
     ul {
+        text-align: left;
         display: none;
         @include border-radius(3px);
         background: #fff;

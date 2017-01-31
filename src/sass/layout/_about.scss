@@ -1,0 +1,31 @@
+.about {
+    .brands-info {
+        padding-bottom: 40px;
+    }
+    &-wrap {
+        padding-top: 40px;
+        padding-bottom: 75px;
+    }
+}
+.about-items {
+    display: -webkit-flex;
+    display:    -moz-flex;
+    display:     -ms-flex;
+    display:      -o-flex;
+    display:         flex;
+    justify-content: space-between;
+}
+.about-item {
+    width: 16%;
+    display: inline-block;
+    vertical-align: top;
+}
+.about-img {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.about-dscr {
+    color: #777;
+    font-size: 14px;
+    line-height: 18px;
+}
