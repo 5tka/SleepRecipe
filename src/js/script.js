@@ -9,8 +9,13 @@ $( document ).ready(function() { // начало document.ready
             .find('.sub-list').stop(true).slideToggle('fast');
     });
 
+/*xeonalex */
+    $('.homepage__slider').bxSlider({});
+    $('.js_select2').each(function(index, el) {
+        $(this).select2({});
+    });
 
-
+/* ENd xeonalex*/
     $('.bestsellers-items').bxSlider({
         slideWidth: 270,
         // infiniteLoop:!0,

@@ -6,6 +6,15 @@
         right: 15px;
         left: 15px;
     }
+    &_sm {
+        max-width: 800px;
+        min-width: 320px;
+        margin: 0 auto;
+        padding:  {
+            right: 15px;
+            left: 15px;
+        }
+    }
 }
 .fl-l {
     float: left;
@@ -27,7 +36,21 @@
         background: #e15b70;
     }
 }
+.btn_nonbg {
+    @include border-radius(3px);
+    @include transition(.25s);
+    background-color: #fff;
+    border: 1px solid #a7adb7;
+    padding: 8px 20px;
+    color: #7393dc;
+    &:hover{
+        background-color: #7393dc;
+        color: #fff;
+    }
+}
+
 .title {
+    font-weight: 400;
     font-size: 22px;
     color: #222;
     text-align: center;
