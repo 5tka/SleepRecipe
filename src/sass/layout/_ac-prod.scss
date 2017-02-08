@@ -102,6 +102,7 @@
     }
     img {
         max-width: 230px;
+        width: 100%;
     }
 }
 .acProd-price {
@@ -225,5 +226,57 @@
                 text-decoration: none !important;
             }
         }
+    }
+}
+@include breakpoint(1170) {
+    .acProd-item {
+        width: 31%;
+        margin: 0 1%;
+        margin-bottom: 50px;
+        &:nth-child(2n) {
+            margin-right: 1%;
+        }
+    }
+    .acProd-img {
+        float: none;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 30px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+@include breakpoint(950) {
+    .acProd-item {
+        width: 49%;
+        margin: 0 .5%;
+        margin-bottom: 50px;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    .acProd-dscr {
+        float: none;
+    }
+    .acProd-options {
+        text-align: center;
+        a {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+@include breakpoint(610) {
+    .acProd-item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+}
+@include breakpoint(320){
+    .pagination ul li:last-child{
+        margin-top: 13px;
     }
 }

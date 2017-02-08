@@ -98,9 +98,9 @@ $( document ).ready(function() { // начало document.ready
 /* ENd xeonalex*/
     $('.bestsellers-items').bxSlider({
         slideWidth: 270,
-        // infiniteLoop:!0,
+        infiniteLoop: false,
         hideControlOnEnd:!0,
-        pager:!1,
+        pager: false,
         nextText:"",
         prevText:"",
         minSlides:1,
@@ -110,7 +110,7 @@ $( document ).ready(function() { // начало document.ready
     $('.non-standard-slider').bxSlider({
         slideWidth: 194,
         slideMargin: 40,
-        // infiniteLoop:!0,
+        infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
         nextText:"",
@@ -122,7 +122,7 @@ $( document ).ready(function() { // начало document.ready
     $('.brands-slider').bxSlider({
         slideWidth: 80,
         slideMargin: 50,
-        // infiniteLoop:!0,
+        infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
         nextText:"",
@@ -136,7 +136,13 @@ $( document ).ready(function() { // начало document.ready
 
 
 
+    $('.header__750mnu .img-trigger').click(function(){
+        $('.header__750mnu .first-mnu').toggleClass('db');
+    });
+
+    $('.header__first-line .img-trigger').click(function(){
+        $('.header__first-line .first-mnu').toggleClass('db');
+    });
 
 
-
-});
+}); // конец document.ready
