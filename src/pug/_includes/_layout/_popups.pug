@@ -1,0 +1,94 @@
+.basket__wrapper#js_basket
+    .b-close.fa.fa-close
+    .basket__title Корзина
+    form.basket__form
+        .basket__table-wrap
+            table.basket__table
+                thead
+                    tr.basket__caption-line
+                        th.name Наименование товара
+                        th.amount Количество
+                        th.price Цена за 1 шт
+                        th.summ Сумма
+                        th.delivery Доставка этого товара
+                        th.remove Удалить
+                tbody
+                    tr.basket__item-line
+                        td.name
+                            .img-wrap
+                                img(src='img/category/1.jpg')
+                            .desc-wrap
+                                p.type Матрас
+                                a.item-name(href='#') Luntek-18 medium econom
+                        td.amount
+                            input.spiner_amount(type='text' name='amount_01' value='1')
+                        td.price 5 200 руб.
+                        td.summ 5 200 руб.
+                        td.delivery 1 546 руб.
+                        td.remove
+                            span.fa.fa-close
+                    tr.basket__item-line
+                        td.name
+                            .img-wrap
+                                img(src='img/category/2.jpg')
+                            .desc-wrap
+                                p.type Матрас
+                                a.item-name(href='#') Luntek-18 medium econom
+                        td.amount
+                            input.spiner_amount(type='text' name='amount_01' value='1')
+                        td.price 5 200 руб.
+                        td.summ 5 200 руб.
+                        td.delivery 1 546 руб.
+                        td.remove
+                            span.fa.fa-close
+        .basket__form-fields
+            .container_sm.clearfix
+                .details__basket
+                    p.line Cтоимость с доставкой:
+                        span.sumDeliv 1 245 руб.
+                    p.line Общая сумма:
+                        span.summ 8 600 руб.
+                .left-side
+                    label
+                        p.text Ваше имя
+                            span.important *
+                        input(type='text' name='name')
+                    label
+                        p.text Телефон
+                            span.important *
+                        input(type='text' name='tel')
+                    label
+                        p.text E-mail
+                            span.important *
+                        input(type='text' name='email')
+                .right-side
+                    label
+                        textarea.comment(name='comment' placeholder='Поле для ввода комментария')
+                .right-side.submit__side
+                    .submit__line.clearfix
+                        a.lookForward(href='#') Продолжить покупки
+                        button(type='submit').submit Оформить заказ
+        .basket__dont-forget
+            p.basket__title Не забудьте купить
+            ul.dont-forget__list
+                li.dont-forget__item
+                    .img-wrap
+                        img(src='img/category/1.jpg')
+                    .desc-wrap
+                        p.cat Наматрасник
+                        a.link(href='#') Пенополиуретановый
+                        p.price 2 396 руб.
+                li.dont-forget__item
+                    .img-wrap
+                        img(src='img/category/2.jpg')
+                    .desc-wrap
+                        p.cat Основание
+                        a.link(href='#') Орион
+                        p.price 1 396 руб.
+                li.dont-forget__item
+                    .img-wrap
+                        img(src='img/category/1.jpg')
+                    .desc-wrap
+                        p.cat Наматрасник
+                        a.link(href='#') Пенополиуретановый
+                        p.price 2 396 руб.

@@ -1,0 +1,184 @@
+extends _layout.pug
+block main
+	section.parallel-wrapper
+		.container
+			.breadcrumbs
+				ul.breadcrumbs-list
+					li
+						a(href="index.html") Главная
+					li
+						a(href="categories.html") Матрасы
+					li.breadcrumbs--active
+						a(href="") Сравнение
+			h2.title Сравнение товаров
+			.parallel__table-wrap
+				table.parallel__table
+					thead
+						tr.table__heading
+							td(colspan="100%")
+								div Описание
+						tr.parallel__table-imgline
+							td Товар
+							td
+								a.prod__link(href='#')
+									.img-wrap
+										img(src='img/temporary/paral02.jpg')
+									.prod__link-text Матрас Luntek-18 medium econom
+							td
+								a.prod__link(href='#')
+									.img-wrap
+										img(src='img/temporary/paral03.jpg')
+									.prod__link-text Матрас Comfort Line Hard Roll Classic
+							td
+								a.prod__link(href='#')
+									.img-wrap
+										img(src='img/temporary/paral02.jpg')
+									.prod__link-text Матрас MaterLux VIP Cortina bis
+							td
+								a.prod__link(href='#')
+									.img-wrap
+										img(src='img/temporary/paral01.jpg')
+									.prod__link-text Подушка Perrino Sonata (ecosilk)
+							td
+								a.prod__link(href='#')
+									.img-wrap
+										img(src='img/temporary/paral01.jpg')
+									.prod__link-text Подушка Brener Еmbrace Euro
+						tr
+							td
+							td
+								select.js_select2(name='size_01')
+									option(valu='50x70') 50 x 70
+									option(valu='60x80') 60 x 80
+							td
+								select.js_select2(name='size_01')
+									option(valu='50x70') 50 x 70
+									option(valu='60x80') 60 x 80
+							td
+								select.js_select2(name='size_01')
+									option(valu='50x70') 50 x 70
+									option(valu='60x80') 60 x 80
+							td
+								select.js_select2(name='size_01')
+									option(valu='50x70') 50 x 70
+									option(valu='60x80') 60 x 80
+							td
+								select.js_select2(name='size_01')
+									option(valu='50x70') 50 x 70
+									option(valu='60x80') 60 x 80
+
+						tr
+							td Цена
+							td 5 520 руб.
+							td 4 520 руб.
+							td 5 860 руб.
+							td 2 220 руб.
+							td 1 980 руб.
+						tr
+							td Производитель
+							td Lonax
+							td ComfortLine
+							td Virtuoz
+							td Lonax
+							td Benartti
+					tbody
+						tr.table__heading
+							td(colspan="100%")
+								div Основные свойства
+						tr
+							td Тип
+							td Пружинный блок: независимый
+							td На независимом пружинном локе
+							td -
+							td -
+							td -
+						tr
+							td Жёсткость верхней стороны:
+							td средняя
+							td мягкий
+							td мягкий
+							td средняя
+							td средняя
+						tr
+							td Жёсткость нижней стороны:
+							td мягкий
+							td жесткий
+							td жесткий
+							td жесткий
+							td средняя
+						tr
+							td Ортопедичность
+							td +
+							td +
+							td -
+							td +
+							td +
+						tr
+							td Особенности
+							td Срок эксплуатации: 9 лет
+							td 7 зон жесткости
+							td Вакуумная упаковка (скрутка)
+							td Срок эксплуатации: 8 лет
+							td Срок эксплуатации: 8 лет
+						tr
+							td Мак. нагрузка  на спальное место
+							td 150 кг.
+							td 130 кг.
+							td 160 кг.
+							td -
+							td -
+						tr
+							td Высота (см)
+							td 20см.
+							td 30см.
+							td 12см.
+							td 10см.
+							td 15см.
+						tr
+							td К-во пружин
+							td -
+							td (520 пружин на 1 м2)
+							td -
+							td -
+							td -
+						tr
+							td Наполнители
+							td MemoryForm Натуральный латекс
+							td MemoryForm Натуральный латекс
+							td MemoryForm Натуральный латекс
+							td Натуральный латекс
+							td Натуральный латекс
+						tr
+							td В корзину
+							td
+								a.add__basket(href='#')
+									span В корзину
+							td
+								a.add__basket(href='#')
+									span В корзину
+							td
+								a.add__basket(href='#')
+									span В корзину
+							td
+								a.add__basket(href='#')
+									span В корзину
+							td
+								a.add__basket(href='#')
+									span В корзину
+						tr
+							td Удалить
+							td
+								a.delete__paral(href='#')
+									span Удалить
+							td
+								a.delete__paral(href='#')
+									span Удалить
+							td
+								a.delete__paral(href='#')
+									span Удалить
+							td
+								a.delete__paral(href='#')
+									span Удалить
+							td
+								a.delete__paral(href='#')
+									span Удалить
