@@ -1,6 +1,11 @@
 .non-standard-items {
-    display: flex;
-    justify-content: space-between;
+    display: -webkit-flex;
+    display:    -moz-flex;
+    display:     -ms-flex;
+    display:      -o-flex;
+    display:         flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
     margin-bottom: 60px;
 }
 .non-standard-item {
@@ -142,5 +147,24 @@
             display: block;
             font-size: 13px;
         }
+    }
+}
+
+@include breakpoint(900) {
+    .non-standard-item {
+        width: 30%;
+        margin-bottom: 30px;
+    }
+}
+@include breakpoint(750) {
+    .non-standard-item {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+}
+@include breakpoint(320) {
+    .non-standard-item {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }

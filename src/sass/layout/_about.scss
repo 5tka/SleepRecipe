@@ -13,7 +13,8 @@
     display:     -ms-flex;
     display:      -o-flex;
     display:         flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-flow: row wrap;
 }
 .about-item {
     width: 16%;
@@ -28,4 +29,16 @@
     color: #777;
     font-size: 14px;
     line-height: 18px;
+}
+@include breakpoint(800) {
+    .about-item {
+        width: 30%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+@include breakpoint(320) {
+    .about-item {
+        width: 100%;
+    }
 }

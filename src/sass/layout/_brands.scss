@@ -13,7 +13,10 @@
         margin-bottom: 0;
     }
 }
-
+.br-img {
+    width: 29%;
+    margin-right: 2%;
+}
 .br-dscr {
     span {
         font-size: 18px;
@@ -96,6 +99,7 @@
     .br-img {
         text-align: center;
         width: 17%;
+        margin-right: 0;
     }
 }
 .order {
@@ -105,7 +109,7 @@
         }
     }
     .br-dscr {
-        width: 65%;
+        width: 68%;
     }
     &-items {
         display: -moz-flex;
@@ -116,7 +120,8 @@
         display:      flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between;
+        justify-content: space-around;
+        flex-flow: row wrap;
     }
     &-item {
         background: #fff;
@@ -144,17 +149,18 @@
             max-width: 860px;
         }
     }
-    .howTo-item{
-        div{
-            display: inline-block;
+    .howTo-item {
+        @include clearfix;
+        div {
+            float: left;
         }
     }
-    .h-img{
+    .h-img {
         text-align: center;
         padding-top: 30px;
         width: 11%;
         vertical-align: middle;
-        margin-right: 10px;
+        margin-right: 2%;
     }
     .h-dscr {
         padding-top: 15px;
@@ -169,6 +175,53 @@
             color: #222;
             display: block;
             margin-bottom: 16px;
+        }
+    }
+}
+@include breakpoint(320) {
+    .br-img,
+    .br-dscr {
+        float: none;
+        width: 100% !important;
+    }
+    .br-dscr {
+        span {
+            text-align: center;
+        }
+    }
+    .br-img {
+        text-align: center;
+    }
+    .guarantees {
+        .br-img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .br-dscr {
+            width: 100%;
+        }
+        .brand-info--alert {
+            .br-dscr {
+                text-align: center;
+            }
+        }
+    }
+    .order-item {
+        width: 100%;
+        div {
+            float: none;
+        }
+    }
+    .order {
+        .h-img {
+            width: 100%;
+            margin: 0;
+        }
+        .h-dscr{
+            width: 100%;
+            span{
+                text-align: center;
+            }
         }
     }
 }

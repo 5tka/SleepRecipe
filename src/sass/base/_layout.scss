@@ -7,6 +7,12 @@
         left: 15px;
     }
 }
+.db {
+    display: block !important;
+}
+.dn {
+    display: none !important;
+}
 .fl-l {
     float: left;
 }
@@ -34,18 +40,25 @@
     margin-bottom: 30px;
 }
 .breadcrumbs {
+    text-overflow: ellipsis;
     margin-bottom: 35px;
     height: 35px;
     line-height: 35px;
     background: #fdfdfd;
     font-family: Georgia, serif;
     font-style: italic;
-    font-style: 14px;
-    padding: 0 25px;
+    font-size: 14px;
+    padding: 0 15px;
     color: #777;
     outline: 1px solid #e5e5e5;
     &--active {
         color: #222;
+    }
+    a {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 .breadcrumbs-list {
@@ -59,13 +72,22 @@
         &:after {
             content: "";
             position: absolute;
-            background: url('../img/tri.png');
+            background: url("../img/tri.png");
             width: 15px;
             height: 38px;
             top: 0;
             right: -20px;
             bottom: 0;
             margin: auto;
+        }
+    }
+}
+@include breakpoint(320) {
+    .breadcrumbs {
+        &--active {
+            a {
+                width: 65px;
+            }
         }
     }
 }
