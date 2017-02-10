@@ -92,3 +92,42 @@
                         p.cat Наматрасник
                         a.link(href='#') Пенополиуретановый
                         p.price 2 396 руб.
+.popup__form#popup_consult
+    .b-close
+        span Закрыть
+    .title-consultation
+        span Получите бесплатную консультацию
+    form(action='#').popup__inner-wrap.js_valid-from
+        .inputs-wrap
+            label.textarea-wrap
+                p.text Оставьте свое сообщение в этой форме, чтобы получить ответ специалиста
+                textarea.consult__textarea(neme='message' placeholder='Текст сообщения')
+            label.input-wrap
+                input.js_val(type='text' name='name' placeholder='Ваше имя')
+                ico.status
+            label.input-wrap
+                input.js_val(type='email' name='email' placeholder='E-mail')
+                ico.status
+        .consult__submit-wrap
+            button(type='reset').reset.js_reset Отмена
+            button(type='submit').submit Отправить
+.popup__form#popup_nonstandart
+    .b-close
+        span Закрыть
+    .title-consultation
+        .inner
+            p.big Отправьте сообщение
+            p.subtext и с вами свяжутся в ближайшее время
+    form(action='#').popup__inner-wrap.js_valid-from
+        .inputs-wrap
+            label.textarea-wrap
+                textarea.consult__textarea(neme='message' placeholder='Текст сообщения')
+            label.input-wrap
+                input.js_val(type='text' name='name' placeholder='Ваше имя')
+                ico.status
+            label.input-wrap
+                input.js_val(type='email' name='email' placeholder='E-mail')
+                ico.status
+        .consult__submit-wrap
+            button(type='reset').reset.js_reset Отмена
+            button(type='submit').submit Отправить

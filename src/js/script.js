@@ -21,6 +21,62 @@ $( document ).ready(function() { // начало document.ready
     });
 
 /*xeonalex */
+    $('#js_nonstandar').click(function(event) {
+        event.preventDefault();
+        $('#popup_nonstandart').bPopup({
+            opacity: 0.65
+        });
+        return false;
+    })
+
+    /* validation */
+    $('.js_valid-from').submit(function(event) {
+            /* Act on the event */
+            event.preventDefault();
+            var status=true;
+            $(this).find('.js_val').each(function(i,elem) {
+                console.log(elem);
+                if($(this).val()!='') {
+                    $(this).next('.status').removeClass('fa-close').addClass('fa-check');
+                } else {
+                    $(this).next('.status').removeClass('fa-check').addClass('fa-close');
+                    status=false;
+                }
+            })
+            return false;
+    });
+    $('.js_valid-from .js_reset').click(function(event) {
+        var parent=$(this).closest('.js_valid-from');
+        parent.find('.fa-close').removeClass('fa-close');
+        parent.find('.fa-check').removeClass('fa-check');
+    });
+
+    $('#js_consult').click(function(event) {
+        event.preventDefault();
+        $('#popup_consult').bPopup({
+            opacity: 0.65
+        });
+        return false;
+    })
+
+
+    var init = 0;
+    var filterObj = $('#container-filter');
+    if (!filterObj.length) {
+        filterObj = $('#sub__cat-filter');
+    }
+    $(window).resize(function(){
+        if (document.documentElement.clientWidth>750 && filterObj.length) {
+            filterObj.attr('style', '');
+        }
+    })
+    $('.dr-2').click(function(event){
+        event.preventDefault();
+            filterObj
+                .css('top',$(this).offset().top+$(this).outerHeight())
+                .slideToggle();
+        return false;
+    });
     $('#js_full-info').click(function(event) {
         event.preventDefault();
         if ($(this).hasClass('active')) {
@@ -98,7 +154,7 @@ $( document ).ready(function() { // начало document.ready
 /* ENd xeonalex*/
     $('.bestsellers-items').bxSlider({
         slideWidth: 270,
-        infiniteLoop: false,
+        // infiniteLoop: false,
         hideControlOnEnd:!0,
         pager: false,
         nextText:"",
@@ -110,7 +166,7 @@ $( document ).ready(function() { // начало document.ready
     $('.non-standard-slider').bxSlider({
         slideWidth: 194,
         slideMargin: 40,
-        infiniteLoop: false,
+        // infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
         nextText:"",
@@ -122,7 +178,7 @@ $( document ).ready(function() { // начало document.ready
     $('.brands-slider').bxSlider({
         slideWidth: 80,
         slideMargin: 50,
-        infiniteLoop: false,
+        // infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
         nextText:"",

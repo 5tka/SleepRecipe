@@ -185,7 +185,7 @@
 				width: 49px;
 				height: 49px;
 				right: -22px;
-				z-index: 5;
+				z-index: 1;
 				border-radius: 50%;
 				background-color: #a7adb7;
 				&:before {
@@ -245,6 +245,7 @@
 		color: #a7adb7;
 		font-size: 18px;
 		position: relative;
+		z-index: 1;
 		&.pink {
 			background: {
 				image: url(../img/icons/dots_pink.png);
@@ -370,7 +371,18 @@
 		}
 	}
 }
-
+@media screen and (max-width: 751px){
+	#container-filter {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+		z-index: 2;
+		.filter_title {
+			display: none;
+		}
+	}
+}
 @media screen and (max-width: 751px)  and (min-width: 481px) {
 	.steps__list {
 		text-align: center;
@@ -427,7 +439,7 @@
 						width: 49px;
 						height: 49px;
 						left: 12%;
-						z-index: 3;
+						z-index: 1;
 						border-radius: 50%;
 						background-color: #a7adb7;
 						background-position: center center;
