@@ -1,0 +1,70 @@
+extends _layout.pug
+block main
+    .contacts-wrapper
+        .container
+            .breadcrumbs
+                ul.breadcrumbs-list
+                    li
+                        a(href="index.html") 
+                            |  Главная         
+                    li.breadcrumbs--active
+                        a(href="") 
+                            |  Контакты 
+            h2.title
+                | Контакты
+            .contacts-container
+                .left-col.fl-l
+                    span Реквезиты интернет магазина «Рецепт Сна» <br>
+                    p
+                        | ИП Маркелов Андрей Алексеевич <br>
+                        | Факт. адрес: Москва ул. Свободы, д.29,<br>
+                        | ТЦ «Мебель России» <br>
+                        | ОГРН311502717800010
+                    #map_canvas
+                .center-col.fl-l
+                    span Филиалы интернет-магазина "Рецепт Сна"
+                    p.
+                        Москва, ул. Свободы, 29, <br>
+                        ТЦ "Мебель России" <br>
+                        Санкт-Петербург, ул. Марата, 61 <br>
+                    span Телефоны:
+                    p.
+                        +7(495)789-57-53 <br>
+                        +7(903)589-57-53 <br>
+                    span Время работы:
+                    p.
+                        С 9:00 до 22:00 без выходных. <br>
+                        Заказы через сайт принимаются круглосуточно.
+                    span
+                        | Контактные данные для получения консультации
+                        ul
+                            li
+                                |E-mail: 
+                                a(href="#")
+                                    |info@recept-sna.ru
+                            li 
+                                | ICQ: 
+                                a(href="#")
+                                    | 605-254-136
+                            li
+                                | Skype: 
+                                a(href="#")
+                                    | Recept-Sna
+                .right-col.fl-r
+                    span.form-title
+                        | Возникли вопросы?
+                    p.form-dscr
+                        | Заполните форму и получите ответ 
+                        | специалиста в течение рабочего дня
+                    .feedback-wrapper
+                        form(action="") 
+                            label(for="text")
+                                textarea(name="", cols="30", rows="10" placeholder="Текст сообщения")
+                            label(for="name")
+                                input(type="text" placeholder="Ваше имя")
+                            label(for="email")
+                                input(type="email" placeholder="E-mail")
+                            button(type="submit").btn
+                                | Отправить
+            a(href="#").btn.leavefeedback
+                | Возникли вопросы?

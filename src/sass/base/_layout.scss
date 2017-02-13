@@ -82,12 +82,37 @@
         }
     }
 }
-@include breakpoint(320) {
+@include breakpoint(749) {
     .breadcrumbs {
-        &--active {
-            a {
-                width: 65px;
+        outline: none;
+        line-height: normal;
+    }
+    .breadcrumbs-list {
+        li {
+            margin-right: 15px;
+            &:after {
+                content: "\203a";
+                background: none;
+                right: -20px;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            &:last-child {
+                &:after {
+                    content: none;
+                }
             }
         }
     }
 }
+// @include breakpoint(320) {
+//     .breadcrumbs {
+//         &--active {
+//             a {
+//                 width: 65px;
+//             }
+//         }
+//     }
+// }
