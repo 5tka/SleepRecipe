@@ -1,186 +1,4 @@
 section.bestsellers
-<<<<<<< HEAD
-	.container_bimbo
-		.homepage__slider-wrap
-			.homepage__slider
-				.homepage__slide
-					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
-						.slide-content.right
-							.skidka-img
-								img(src='img/slider/main/skidki01.png')
-							a.details(href='#') Узнать больше
-				.homepage__slide
-					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
-						.slide-content.right
-							.skidka-img
-								img(src='img/slider/main/skidki01.png')
-							a.details(href='#') Узнать больше
-				.homepage__slide
-					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
-						.slide-content.right
-							.skidka-img
-								img(src='img/slider/main/skidki01.png')
-							a.details(href='#') Узнать больше
-	.container_bimbo#container-filter
-		.search-filter-wrap
-			h2.filter_title Поиск матраса по характеристикам
-			form.filters-wrap.main-filter
-				.form__inner-wrap.clearfix
-					.checkbox-block
-						.line-block.clearfix
-							.checkbox-wrap.for_mattressType
-								.checkbox-caption Тип матраса
-								label.checkbox.pink
-									input(type='checkbox', name='mattressType', value='1')
-									p.checkbox-text
-										span.dot
-										span.text Ортопедические пружинные
-								label.checkbox.pink
-									input(type='checkbox', name='mattressType', value='2')
-									p.checkbox-text
-										span.dot
-										span.text Ортопедические беспружинные
-								label.checkbox.pink
-									input(type='checkbox', name='mattressType', value='3')
-									p.checkbox-text
-										span.dot
-										span.text Скрученные
-								label.checkbox.pink
-									input(type='checkbox', name='mattressType', value='4')
-									p.checkbox-text
-										span.dot
-										span.text Детские
-								label.checkbox.pink
-									input(type='checkbox', name='mattressType', value='4')
-									p.checkbox-text
-										span.dot
-										span.text Эконом
-							.checkbox-wrap.for_rigidity
-								.checkbox-caption Жесткость матраса
-								label.checkbox.pink
-									input(type='checkbox', name='rigidity', value='1')
-									p.checkbox-text
-										span.dot
-										span.text Переменная
-								label.checkbox.pink
-									input(type='checkbox', name='rigidity', value='2')
-									p.checkbox-text
-										span.dot
-										span.text Одинаковая
-						.line-block.clearfix
-							.left-side
-								.checkbox-wrap.for_Up
-									.checkbox-caption Верх
-									label.checkbox.pink
-										input(type='checkbox', name='up', value='1')
-										p.checkbox-text
-											span.dot
-											span.text Мягкий
-									label.checkbox.pink
-										input(type='checkbox', name='up', value='2')
-										p.checkbox-text
-											span.dot
-											span.text Средний
-									label.checkbox.pink
-										input(type='checkbox', name='up', value='3')
-										p.checkbox-text
-											span.dot
-											span.text Жесткий
-								.checkbox-wrap.for_Down
-									.checkbox-caption Низ
-									label.checkbox.pink
-										input(type='checkbox', name='down', value='1')
-										p.checkbox-text
-											span.dot
-											span.text Мягкий
-									label.checkbox.pink
-										input(type='checkbox', name='down', value='2')
-										p.checkbox-text
-											span.dot
-											span.text Средний
-									label.checkbox.pink
-										input(type='checkbox', name='down', value='3')
-										p.checkbox-text
-											span.dot
-											span.text Жесткий
-							.right-side
-								.checkbox-wrap.for_Other
-									label.checkbox.pink
-										input(type='checkbox', name='other', value='1')
-										p.checkbox-text
-											span.dot
-											span.text Нестандартный размер
-									label.checkbox.pink
-										input(type='checkbox', name='other', value='2')
-										p.checkbox-text
-											span.dot
-											span.text Скидка
-					.selectors-wrapper
-						//- .select-size-wrap
-						//- 	select(size='9' name='size' )
-						//- 		option(value='Любая') Любая
-						//- 		option(value='60') 60
-						//- 		option(value='65') 65
-						//- 		option(value='70') 70
-						//- 		option(value='80') 80
-						//- 		option(value='90') 90
-						//- 		option(value='100') 100
-						//- 		option(value='110') 110
-						//- 		option(value='120') 120
-						//- 		option(value='130') 130
-						.selectors-block
-							.line
-								p.line__caption
-									| Размер матраса, см.
-								.select-wrap.clearfix
-									select.js_select2.fl.width.s_w50(name='width' )
-										option(value='120') 110
-										option(value='120') 120
-										option(value='120') 130
-										option(value='120') 140
-									select.js_select2.fr.length.s_w50(name='length')
-										option(value='120') 210
-										option(value='120') 220
-										option(value='120') 230
-										option(value='120') 240
-							.line
-								p.line__caption
-									| Ценовой диапазон
-								.select-wrap
-									select.js_select2.priceRange.s_fw(name='priceRange')
-										option(value='all') Любая
-										option(value='120') 1000-2000
-										option(value='120') 2000-4000
-										option(value='120') 4000-6000
-										option(value='120') 6000-8000
-							.line
-								p.line__caption
-									| Производитель
-								.select-wrap
-									select.js_select2.producer.s_fw(name='producer')
-										option(value='all') Любой
-										option(value='120') are
-										option(value='120') asda
-										option(value='120') asd
-										option(value='120') 600sdf
-							.line
-								p.line__caption
-									| Высота матраса, см.
-								.select-wrap.clearfix
-									select.js_select2.fl.heightFrom.s_w50(name='heightFrom' )
-										option(value='120') 110
-										option(value='120') 120
-										option(value='120') 130
-										option(value='120') 140
-									select.js_select2.fr.heightTo.s_w50(name='heightTo')
-										option(value='120') 210
-										option(value='120') 220
-										option(value='120') 230
-										option(value='120') 240
-				.submit-wrap
-					button(type='submit').submit Показать
-					p.available_text В наличии: 721 модель
-=======
 	.homeslider-filter-wrap
 		.container
 			.container_bimbo
@@ -446,7 +264,6 @@ section.bestsellers
 								a(href='#').extended-link Расширенный поиск
 							button(type='submit').submit Показать
 							p.available_text В наличии: 721 модель
->>>>>>> e051d8c8198b2630783c00dba5443eacf90f33de
 	.container
 		.steps_block
 			h2.title
@@ -580,7 +397,7 @@ section.bestsellers
 					| Смотреть все лидеры продаж  →
 	.container
 		h2.title
-			| Детские матрасы 
+			| Детские матрасы
 		.bestsellersSlider-wrap
 			.bestsellers-items
 				.product-item
@@ -668,7 +485,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -686,7 +503,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -704,7 +521,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -722,7 +539,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -828,7 +645,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -846,7 +663,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -864,7 +681,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -882,7 +699,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
