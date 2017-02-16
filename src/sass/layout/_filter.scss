@@ -101,13 +101,36 @@
 			}
 		}
 	}
+	.for_rigidity2 {
+		float: left;
+		width: 50%;
+	}
+	.extended-block {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.extended-link {
+		display: inline-block;
+		font-size: 15px;
+	    color: #7393dc;
+	    &:hover {
+	    	text-decoration: underline;
+	    }
+	}
 	.selectors-block {
 		@include border-radius(2px);
 		margin-left: 50px;
 		background-color: #dce2e8;
-		padding: 24px 30px 34px ;
+		padding: 24px 30px 24px ;
 		width: 300px;
 		float: left;
+		.non-stand {
+			font-size: 15px;
+		    color: #7393dc;
+		    &:hover {
+		    	text-decoration: underline;
+		    }
+		}
 		.line {
 			margin-bottom: 10px;
 			&:last-of-type{
@@ -279,6 +302,23 @@
 .fl {
 	float: left;
 }
+.filters-wrap.main-filter {
+	padding: 30px 20px;
+	.checkbox-block{
+		width: 100%;
+		margin-left: 0;
+	}
+	.selectors-block {
+		display: inline-block;
+		float: none;
+		text-align: left;
+	}
+	.selectors-wrapper {
+		text-align: center;
+		float: none;
+	}
+}
+
 
 /* стили чекбокса */
 .checkbox {
@@ -359,6 +399,7 @@
 }
 
 @media screen and (max-width: 1170px) {
+
 	.filters-wrap.main-filter {
 		padding: 30px 25px;
 		text-align: center;
@@ -366,10 +407,10 @@
 			text-align: left;
 			width: 100%;
 			@include clearfix;
-			.line-block {
-				width: 50%;
-				float: left;
-			}
+			// .line-block {
+			// 	width: 50%;
+			// 	float: left;
+			// }
 			.left-side,
 			.right-side {
 				width: 100%;

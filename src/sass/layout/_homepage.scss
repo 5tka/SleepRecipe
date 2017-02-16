@@ -11,6 +11,9 @@
 		background-size: cover;
 		height: 300px;
 		position: relative;
+		&.sell-out {
+			background-position: 50%;
+		}
 	}
 	.slide-content {
 		position: absolute;
@@ -21,7 +24,8 @@
 		}
 	}
 	.skidka-img {
-		width: 90%;
+	    width: 75%;
+		// width: 90%;
 		margin-bottom: -15px;
 	}
 	.details {
@@ -45,6 +49,19 @@
 		}
 
 	}
+}
+.homeslider-filter-wrap {
+	.container_bimbo {
+		float: left;
+		width: 50%;
+		padding: 0;
+	}
+	.container {
+
+	}
+}
+#container-filter {
+	padding-left: 10px;
 }
 .homepage__slider-wrap {
 	position: relative;
@@ -375,6 +392,18 @@
 	}
 }
 @media screen and (max-width: 751px){
+	.homeslider-filter-wrap {
+		.container {
+			padding: 0;
+		}
+	}
+	#container-filter {
+		padding-left: 0;
+	}
+	.homeslider-filter-wrap .container_bimbo {
+		width: 100%;
+		float: none;
+	}
 	.homepage__slide {
 		.slide__inner-wrap {
 			height: 280px;
