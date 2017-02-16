@@ -1,0 +1,235 @@
+extends _layout.pug
+block main
+	section.sub__categories
+		.container
+			.breadcrumbs
+				ul.breadcrumbs-list
+					li
+						a(href="index.html")
+							|  Главная
+					li.breadcrumbs--active
+						a(href="")
+							|  Матрасы
+			.content-wrapper.clearfix
+				form.search-filter-wrap#sub__cat-filter
+					.filter_title Расширенный поиск
+					.filter__accord-block
+						.filter__accord-title Цена
+						.filter__accord-hidden.js_sliderWrap
+							.range-input-wrapp
+								label.slider_inp-wrap
+									span.label-text от
+									input.slider_inp#js_sl_prise_from(type='text' value='' name='priseFrom' data-num='0')
+								label.slider_inp-wrap
+									span.label-text до
+									input.slider_inp#js_sl_prise_to(type='text' value='' name='priseFrom' data-num='1')
+									span.extra руб.
+							.js_sl_prise.slideUI
+					.filter__accord-block
+						.filter__accord-title Тип матраса
+						.filter__accord-hidden
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='1')
+									p.checkbox-text
+										span.dot
+										span.text Ортопедические пружинные
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='2')
+									p.checkbox-text
+										span.dot
+										span.text Ортопедические беспружинные
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='3')
+									p.checkbox-text
+										span.dot
+										span.text Скрученные
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Детские
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Эконом
+					.filter__accord-block
+						.filter__accord-title Тип пружинного блока
+						.filter__accord-hidden
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Зависимый
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Независимый
+					.filter__accord-block
+						.filter__accord-title Жесткость матраса
+						.filter__accord-hidden
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Переменная
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Одинаковая
+					.filter__accord-block
+						.filter__accord-title Верх/Низ
+						.filter__accord-hidden
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Мягкий
+								label.checkbox.lightbl
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Средний
+					.filter__accord-block.submit_block
+						button.reset__filter(type='reset' name='reset') Сбросить
+						button.submit__filter(type='submit' name='show') Показать
+				.content-side
+					.sort-wrap.clearfix
+						label.sorting.label
+							span.label-text Сортировка:
+							select.js_select2(name='sorting')
+								option(val='def') По умолчанию
+								option(val='def') По цене
+								option(val='def') По рейтингу
+						label.amount.label
+							span.label-text Колличество на странице:
+							input.amount_inp(type='text' name='amount' value='9' readonly)
+						.view.label
+							span.label-text Вид:
+							label
+								input.inputh(type='radio' name='view' value='line')
+								.icon-wrap.line-like
+									span.icon В строку
+							label
+								input.inputh(type='radio' name='view' value='line' checked)
+								.icon-wrap.table-like
+									span.icon Таблицой
+					.product__list
+						- for (var x= 0; x< 9; x++)
+							.product-item
+								.prod-img
+									img(src="img/item-1.jpg", alt="")
+								.prod-dscr
+									span.dscr
+										| Экстра Мини
+										span / Матрас
+								.prod-price
+									span
+										| От 8 660 руб.
+								.prod-controls
+									ul
+										li
+											a(href="#")
+												img(src="img/star.png", alt="")
+										li
+											a(href="#")
+												img(src="img/left-right.png", alt="")
+					.pagination
+						ul
+							li.pagination--active
+								a(href="#") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") →
+							li
+								a(href="#") Показать еще
+			.subcateg__descr-block
+				h4.subcateg__title Статья для подкатегории матрасы
+				p Обладает высокой устойчивостью к нагрузкам − до 160 кг на одно спальное место. Блок независимых пружин Pocket Spring шахматной сборки повышенной прочности, усиленный двумя рамками из стали, обеспечивает лучший ортопедический эффект. Точечное распределение нагрузки исключает «эффект волны» в двуспальных моделях (когда есть большая разница в весе у людей, спящих на разных половинах матраса).
+				p Блок независимых пружин Pocket Spring шахматной сборки повышенной прочности, усиленный двумя рамками из стали, обеспечивает лучший ортопедический эффект. Точечное распределение нагрузки исключает «эффект волны» в двуспальных моделях (когда есть большая разница в весе у людей, спящих на разных половинах матраса).
+			h2.title
+				| Хиты продаж
+			.bestsellersSlider-wrap
+				.bestsellers-items
+					.product-item.product-item--hit
+						.prod-img
+							a(href="prod-card.html")
+								img(src="img/item-1.jpg", alt="")
+						.prod-dscr
+							span.dscr
+								| Экстра Мини
+								span / Матрас
+						.prod-price
+							span
+								| От 8 660 руб.
+						.prod-controls
+							ul
+								li
+									a(href="#")
+										img(src="img/star.png", alt="")
+								li
+									a(href="#")
+										img(src="img/left-right.png", alt="")
+					.product-item
+						.prod-img
+							img(src="img/item-1.jpg", alt="")
+						.prod-dscr
+							span.dscr
+								| Экстра Мини
+								span / Матрас
+						.prod-price
+							span
+								| От 8 660 руб.
+						.prod-controls
+							ul
+								li
+									a(href="#")
+										img(src="img/star.png", alt="")
+								li
+									a(href="#")
+										img(src="img/left-right.png", alt="")
+					.product-item
+						.prod-img
+							img(src="img/item-1.jpg", alt="")
+						.prod-dscr
+							span.dscr
+								| Экстра Мини
+								span / Матрас
+						.prod-price
+							span
+								| От 8 660 руб.
+						.prod-controls
+							ul
+								li
+									a(href="#")
+										img(src="img/star.png", alt="")
+								li
+									a(href="#")
+										img(src="img/left-right.png", alt="")
+					.product-item
+						.prod-img
+							img(src="img/item-1.jpg", alt="")
+						.prod-dscr
+							span.dscr
+								| Экстра Мини
+								span / Матрас
+						.prod-price
+							span
+								| От 8 660 руб.
+						.prod-controls
+							ul
+								li
+									a(href="#")
+										img(src="img/star.png", alt="")
+								li
+									a(href="#")
+										img(src="img/left-right.png", alt="")
+				.watch-more
+					a(href="#")
+						| Смотреть все хиты продаж  →
+

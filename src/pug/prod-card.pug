@@ -2,6 +2,93 @@ extends _layout.pug
 block main
     .prodCard-wrapper
         .container
+            .product-preview-wrap.clearfix
+                h2.product__title.mob Матрас Classic +10 TFK
+                .product__storage.mob
+                    p.status.available
+                        span Товар в наличии
+                .left-side
+                    .prod-preview
+                        img#product_img(src='img/product/prod-img1.png')
+                        .status.ac
+                            | Акция
+                            span.akcent -30%
+                    .prod-preview-list
+                        .inner-wrap
+                            .preview-wrap
+                                .prod__preview-item(data-img='img/product/prod-img1.png')
+                                    img(src='img/product/prod-img1.png')
+                            .preview-wrap
+                                .prod__preview-item(data-img='img/product/prod-img2.png')
+                                    img(src='img/product/prod-img2.png')
+                            .preview-wrap
+                                .prod__preview-item(data-img='img/product/prod-img3.png')
+                                    img(src='img/product/prod-img3.png')
+                            .preview-wrap
+                                .prod__preview-item(data-img='img/product/prod-img4.png')
+                                    img(src='img/product/prod-img4.png')
+                .right-side
+                    h2.product__title Матрас Classic +10 TFK
+                    .product__price-line.clearfix
+                        .product__price
+                            p.current__price
+                                span.num 4 047
+                                | руб.
+                            span.previous__price 5 058 руб.
+                        .product__storage
+                            p.status.available
+                                span Товар в наличии
+                    .product__selector
+                        label.product__lalel
+                            p.label--text Выберите ширину и длину матраса:
+                            select.js_select2(name='size')
+                                option 80х190
+                                option 100х200
+                            p.info
+                                span.ico ?
+                                span Нестандартный размер
+                    .product__buttons.clearfix
+                        .left-buttons
+                            a(href='#').add__basket
+                                span В корзину
+                            a(href='#').buylink__one-click Купить в 1 клик
+                        .right-buttons
+                            .block
+                                a(href='#').add__favorite
+                                    span.ico.fa.fa-star-o
+                                    span В избранное
+                                a(href='#').add__parallel
+                                    span.ico.fa.fa-exchange
+                                    span В сравнения
+                            p.delivery-time
+                                span.ico.fa.fa-car
+                                span Доставка:  24.01.17 (завтра)
+        .container_bimbo
+            #product__tabs
+                ul.tabs__list.clearfix
+                    li.tabs__item
+                        a.tabs__link(href='#features') Характеристики
+                    li.tabs__item
+                        a.tabs__link(href='#description ') Описание
+                    li.tabs__item
+                        a.tabs__link(href='#shipping ') Доставка
+                    li.tabs__item
+                        a.tabs__link(href='#reviews ') Отзывы
+                    li.tabs__item
+                        a.tabs__link(href='#video') Видео
+                .tabs__wrap
+                    #features features
+                    #description
+                        dl.desrc__list
+                            .desrc__line
+                                dt Код товара:
+                                dd 819
+                            .desrc__line
+                                dt Высота матраса:
+                                dd 16 см
+                    #shipping shipping
+                    #reviews reviews
+                    #video video
             h2.title
                 | Вместе с этим покупают
             .bestsellersSlider-wrap
@@ -12,7 +99,7 @@ block main
                                 img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -30,7 +117,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -48,7 +135,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -66,7 +153,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -90,7 +177,7 @@ block main
                                 img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -108,7 +195,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -126,7 +213,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span
@@ -144,7 +231,7 @@ block main
                             img(src="img/item-1.jpg", alt="")
                         .prod-dscr
                             span.dscr
-                                | Экстра Мини 
+                                | Экстра Мини
                                 span / Матрас
                         .prod-price
                             span

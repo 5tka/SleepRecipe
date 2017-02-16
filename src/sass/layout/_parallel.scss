@@ -1,0 +1,113 @@
+.parallel-wrapper {
+	.container {
+		padding-bottom: 75px;
+	}
+	.title {
+		margin-bottom: 20px;
+	}
+}
+.parallel__table {
+	&-wrap {
+		width: 100%;
+		overflow: auto;
+	}
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 15px;
+	color: #222222;
+	tr  {
+		&.parallel__table-imgline {
+			td {
+				padding-bottom: 25px;
+			}
+			td:first-of-type {
+				vertical-align: top;
+				padding-top: 140px;
+			}
+		}
+		td:first-of-type {
+			text-align: right;
+			font-size: 14px;
+			color: #777777;
+		}
+	}
+
+	td {
+		text-align: center;
+		padding: 10px;
+		border: 1px solid #e5e5e5;
+		&:not(:first-of-type) {
+			min-width: 195px;
+		}
+	}
+	tr.table__heading {
+		td {
+			background-color: #dce2e8;
+			color: #222;
+			text-align: left;
+			font-size: 18px;
+			padding: 8px 15px 8px 28px;
+		}
+	}
+	.delete__paral {
+		@extend .fa;
+		@extend .fa-close;
+		color: $pink;
+		display: inline-block;
+		padding: 6px;
+		span {
+			display: none;
+		}
+	}
+	.js_select2 + .select2 {
+		width: 100px !important;
+	}
+	.select2-container--default .select2-selection--single {
+		border-radius: 0;
+		color: #222222;
+	}
+	.img-wrap{
+		width: 100%;
+		height: 120px;
+		overflow: hidden;
+		margin-bottom: 10px;
+		img {
+			max-width: 100%;
+		}
+	}
+	.prod__link-text {
+		color: $blue;
+	}
+
+	.add__basket {
+		margin: 0;
+		display: inline-block;
+		padding: 9px 10px;
+		width: 148px;
+	    color: #fff;
+	    border-radius: 3px;
+	    background-image: -webkit-linear-gradient(90deg,#f15f76,#f46f84);
+	    background-image: -ms-linear-gradient(90deg,#f15f76 0,#f46f84 100%);
+	    border-bottom: 2px solid #dc5066;
+	    span {
+	    	vertical-align: middle;
+	    }
+	    &:hover {
+	    	background-image: -webkit-linear-gradient(90deg,#dc566b,#f46f84);
+		    background-image: -ms-linear-gradient(90deg,#dc566b 0,#f46f84 100%);
+	    }
+	    &:before {
+	    	margin-right: 10px;
+	    	display: inline-block;
+	    	content: '';
+	    	width: 20px;
+	    	height: 18px;
+	    	vertical-align: middle;
+	    	background: {
+				image: url(../img/icons/elements/bag2.png);
+				size: cover;
+				repeat: no-repeat;
+	    	}
+	    }
+	}
+}

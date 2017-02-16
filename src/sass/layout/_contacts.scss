@@ -97,7 +97,7 @@
     margin-top: 50px;
     display: none;
 }
-@include breakpoint(900) {
+@include breakpoint(1000) {
     .right-col {
         display: none;
     }
@@ -109,6 +109,9 @@
     }
     .leavefeedback {
         display: block;
+    }
+    .contacts-container .center-col{
+        border-right: transparent;
     }
 }
 @include breakpoint(320) {

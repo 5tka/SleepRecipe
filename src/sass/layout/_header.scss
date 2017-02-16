@@ -18,6 +18,9 @@
         .container {
             @include clearfix;
         }
+        span {
+            margin: 0 3px;
+        }
     }
     &__second-line {
         display: block;

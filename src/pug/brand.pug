@@ -1,0 +1,54 @@
+extends _layout.pug
+block main
+    .container
+        .breadcrumbs
+            ul.breadcrumbs-list
+                li
+                    a(href="index.html")
+                        |  Главная
+                li.breadcrumbs--active
+                    a(href="")
+                        |  Название бренда
+    .brand-container
+        .container
+            .bTitle-wrap.clearfix
+                label.forSelect
+                    span.label-text Сортировка:
+                    select(name='sort').js_select2
+                        option Матрасы
+                        option Подушки
+                h2.title
+                    | Название бренда
+            .product__list
+                - for (var x= 0; x< 16; x++)
+                    .product-item
+                        .prod-img
+                            img(src="img/item-1.jpg", alt="")
+                        .prod-dscr
+                            span.dscr
+                                | Экстра Мини
+                                span / Матрас
+                        .prod-price
+                            span
+                                | От 8 660 руб.
+                        .prod-controls
+                            ul
+                                li
+                                    a(href="#")
+                                        img(src="img/star.png", alt="")
+                                li
+                                    a(href="#")
+                                        img(src="img/left-right.png", alt="")
+                .watch-more
+                    a(href="#")
+                        | Смотреть все товары этого бренда  →
+            .brands-info
+                .brand-info
+                    .br-img.fl-l
+                        img(src="img/brand-1.jpg", alt="")
+                    .br-dscr.fl-r
+                        span Spring Air
+                        p
+                            | Обладает высокой устойчивостью к нагрузкам − до 160 кг на одно спальное место. Блок независимых пружин Pocket Spring шахматной сборки повышенной прочности, усиленный двумя рамками из стали, обеспечивает лучший ортопедический эффект. Точечное распределение нагрузки исключает «эффект волны» в двуспальных моделях (когда есть большая разница в весе у людей, спящих на разных половинах матраса).
+                        p
+                            | Точечное распределение нагрузки исключает «эффект волны» в двуспальных моделях (когда есть большая разница в весе у людей, спящих на разных половинах матраса).

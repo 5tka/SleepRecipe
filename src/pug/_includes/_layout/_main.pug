@@ -1,4 +1,234 @@
 section.bestsellers
+	.container_bimbo
+		.homepage__slider-wrap
+			.homepage__slider
+				.homepage__slide
+					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
+						.slide-content.right
+							.skidka-img
+								img(src='img/slider/main/skidki01.png')
+							a.details(href='#') Узнать больше
+				.homepage__slide
+					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
+						.slide-content.right
+							.skidka-img
+								img(src='img/slider/main/skidki01.png')
+							a.details(href='#') Узнать больше
+				.homepage__slide
+					.slide__inner-wrap.sell-out(style='background-image: url(img/slider/main/bg1.jpg)')
+						.slide-content.right
+							.skidka-img
+								img(src='img/slider/main/skidki01.png')
+							a.details(href='#') Узнать больше
+	.container_bimbo#container-filter
+		.search-filter-wrap
+			h2.filter_title Поиск матраса по характеристикам
+			form.filters-wrap.main-filter
+				.form__inner-wrap.clearfix
+					.checkbox-block
+						.line-block.clearfix
+							.checkbox-wrap.for_mattressType
+								.checkbox-caption Тип матраса
+								label.checkbox.pink
+									input(type='checkbox', name='mattressType', value='1')
+									p.checkbox-text
+										span.dot
+										span.text Ортопедические пружинные
+								label.checkbox.pink
+									input(type='checkbox', name='mattressType', value='2')
+									p.checkbox-text
+										span.dot
+										span.text Ортопедические беспружинные
+								label.checkbox.pink
+									input(type='checkbox', name='mattressType', value='3')
+									p.checkbox-text
+										span.dot
+										span.text Скрученные
+								label.checkbox.pink
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Детские
+								label.checkbox.pink
+									input(type='checkbox', name='mattressType', value='4')
+									p.checkbox-text
+										span.dot
+										span.text Эконом
+							.checkbox-wrap.for_rigidity
+								.checkbox-caption Жесткость матраса
+								label.checkbox.pink
+									input(type='checkbox', name='rigidity', value='1')
+									p.checkbox-text
+										span.dot
+										span.text Переменная
+								label.checkbox.pink
+									input(type='checkbox', name='rigidity', value='2')
+									p.checkbox-text
+										span.dot
+										span.text Одинаковая
+						.line-block.clearfix
+							.left-side
+								.checkbox-wrap.for_Up
+									.checkbox-caption Верх
+									label.checkbox.pink
+										input(type='checkbox', name='up', value='1')
+										p.checkbox-text
+											span.dot
+											span.text Мягкий
+									label.checkbox.pink
+										input(type='checkbox', name='up', value='2')
+										p.checkbox-text
+											span.dot
+											span.text Средний
+									label.checkbox.pink
+										input(type='checkbox', name='up', value='3')
+										p.checkbox-text
+											span.dot
+											span.text Жесткий
+								.checkbox-wrap.for_Down
+									.checkbox-caption Низ
+									label.checkbox.pink
+										input(type='checkbox', name='down', value='1')
+										p.checkbox-text
+											span.dot
+											span.text Мягкий
+									label.checkbox.pink
+										input(type='checkbox', name='down', value='2')
+										p.checkbox-text
+											span.dot
+											span.text Средний
+									label.checkbox.pink
+										input(type='checkbox', name='down', value='3')
+										p.checkbox-text
+											span.dot
+											span.text Жесткий
+							.right-side
+								.checkbox-wrap.for_Other
+									label.checkbox.pink
+										input(type='checkbox', name='other', value='1')
+										p.checkbox-text
+											span.dot
+											span.text Нестандартный размер
+									label.checkbox.pink
+										input(type='checkbox', name='other', value='2')
+										p.checkbox-text
+											span.dot
+											span.text Скидка
+					.selectors-wrapper
+						//- .select-size-wrap
+						//- 	select(size='9' name='size' )
+						//- 		option(value='Любая') Любая
+						//- 		option(value='60') 60
+						//- 		option(value='65') 65
+						//- 		option(value='70') 70
+						//- 		option(value='80') 80
+						//- 		option(value='90') 90
+						//- 		option(value='100') 100
+						//- 		option(value='110') 110
+						//- 		option(value='120') 120
+						//- 		option(value='130') 130
+						.selectors-block
+							.line
+								p.line__caption
+									| Размер матраса, см.
+								.select-wrap.clearfix
+									select.js_select2.fl.width.s_w50(name='width' )
+										option(value='120') 110
+										option(value='120') 120
+										option(value='120') 130
+										option(value='120') 140
+									select.js_select2.fr.length.s_w50(name='length')
+										option(value='120') 210
+										option(value='120') 220
+										option(value='120') 230
+										option(value='120') 240
+							.line
+								p.line__caption
+									| Ценовой диапазон
+								.select-wrap
+									select.js_select2.priceRange.s_fw(name='priceRange')
+										option(value='all') Любая
+										option(value='120') 1000-2000
+										option(value='120') 2000-4000
+										option(value='120') 4000-6000
+										option(value='120') 6000-8000
+							.line
+								p.line__caption
+									| Производитель
+								.select-wrap
+									select.js_select2.producer.s_fw(name='producer')
+										option(value='all') Любой
+										option(value='120') are
+										option(value='120') asda
+										option(value='120') asd
+										option(value='120') 600sdf
+							.line
+								p.line__caption
+									| Высота матраса, см.
+								.select-wrap.clearfix
+									select.js_select2.fl.heightFrom.s_w50(name='heightFrom' )
+										option(value='120') 110
+										option(value='120') 120
+										option(value='120') 130
+										option(value='120') 140
+									select.js_select2.fr.heightTo.s_w50(name='heightTo')
+										option(value='120') 210
+										option(value='120') 220
+										option(value='120') 230
+										option(value='120') 240
+				.submit-wrap
+					button(type='submit').submit Показать
+					p.available_text В наличии: 721 модель
+	.container
+		.steps_block
+			h2.title
+				| Как заказать и выбрать матрас?
+			ul.steps__list.clearfix
+				li.steps__item.first
+					p.steps_caption.pink
+						i.ico
+						span Шаг 1
+					p.steps_details Настраиваем фильтр <br> поиска по интересующим <br> параметрам
+				li.steps__item.second
+					p.steps_caption
+						i.ico
+						span Шаг 2
+					p.steps_details Выбираем товар и добавляем <br> его в корзину
+				li.steps__item.third
+					p.steps_caption
+						i.ico
+						span Шаг 3
+					p.steps_details Выбираем наиболее удобный <br> способ оформления заказа
+				li.steps__item.fourth
+					p.steps_caption
+						span Шаг 4
+					p.steps_details Связываемся с менеджером и <br> обсуждаем детали оплаты и <br> доставки
+			.block_footer
+				a(href='#').more-link.btn_nonbg Узнать больше →
+	.info
+		.container
+			ul.info__list.clearfix
+				li.info__item
+					i.ico
+						img(src='img/icons/info1.png')
+					p.info__details Изготовление матрасов нестандартных форм и размеров в течение 24 часов
+				li.info__item
+					i.ico
+						img(src='img/icons/info2.png')
+					p.info__details Бесплатная доставка по МСк и России. Некоторые товарные позиции доставляются платно.
+				li.info__item
+					i.ico
+						img(src='img/icons/info3.png')
+					p.info__details Более 500 видов матрасов от лучших российских и зарубежных производителей.
+				li.info__item
+					i.ico
+						img(src='img/icons/info4.png')
+					p.info__details Все товары сертифицированы и отвечают международным технологическим стандартам
+				li.info__item
+					i.ico
+						img(src='img/icons/info5.png')
+					p.info__details Многоуровневый контроль обеспечивает 100% качество каждой торговой позиции
+			a.info__list_link#js_full-info(href='#') Смотреть все преимущества  →
 	.container
 		h2.title
 			| Лидеры продаж
@@ -10,7 +240,7 @@ section.bestsellers
 							img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -28,7 +258,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -46,7 +276,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -64,7 +294,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -90,7 +320,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -108,7 +338,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -126,7 +356,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -144,7 +374,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -165,7 +395,7 @@ section.bestsellers
 			| Скидки на тонкие матрасы
 		.bestsellersSlider-wrap
 			.bestsellers-items
-				.product-item.product-item--ac
+				.product-item.product-item--ac.product-item--sale
 					.prod-img
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
@@ -245,12 +475,12 @@ section.bestsellers
 			| Скидки на ортопедические матрасы
 		.bestsellersSlider-wrap
 			.bestsellers-items
-				.product-item.product-item--ac
+				.product-item.product-item--ac.product-item--sale
 					.prod-img
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -268,7 +498,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -286,7 +516,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -304,7 +534,7 @@ section.bestsellers
 						img(src="img/item-1.jpg", alt="")
 					.prod-dscr
 						span.dscr
-							| Экстра Мини 
+							| Экстра Мини
 							span / Матрас
 					.prod-price
 						span
@@ -400,6 +630,21 @@ section.bestsellers
 			.watch-more
 				a(href="ac-prod.html")
 					| Смотреть все последнее пополнение ассортимента  →
+section.section__text
+	.container_sm
+		h2.title Ортопедические матрасы: <br> улучшайте качество своего сна уже сегодня!
+		.text-wrap
+			.text-section
+				p.subtitle Как выбрать матрас?
+				p Простое руководство по выбору матраса. Что делать, если вы совсем не знаете, как подступиться к выбору матраса. Мы расскажем, на что обратить внимание и какие параметры подойдут именно вам.
+			.text-section
+				p.subtitle 1. Размер
+				p Выбирая размер матраса, ориентируйтесь на размеры спального места, а не на габариты кровати. Также не стоит измерять старый матрас, потому как за время эксплуатации он мог деформироваться.
+			.text-section
+				p.subtitle 2. Жесткость
+				p Если нет специальных медицинских показаний, то выбор жесткости матраса зависит от веса спящего. Чем тяжелее человек, тем сильнее он продавливает матрас и тем более жесткий матрас ему нужен. И наоборот.
+				p.mb Для человека весом 70-90 кг следует выбирать матрас средней жесткости. Более тяжелым людям нужны более жесткие матрасы, менее тяжелым - более мягкие. Также следует помнить, что для пожилых людей обычно выбирают более мягкие модели. А вот детям дошкольного возраста наоборот - более жесткие.
+				p.indent Если вы не можете определиться с жесткостью, то отличным решением будет матрас с разной жесткостью сторон. Жесткость такого матраса можно изменить, просто перевернув его.
 section.brands
 	.container
 		.brandsWrapper

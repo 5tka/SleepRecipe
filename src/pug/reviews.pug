@@ -1,0 +1,101 @@
+extends _layout.pug
+block main
+	section.reviews
+		.container
+			.breadcrumbs
+				ul.breadcrumbs-list
+					li
+						a(href="index.html")
+							|  Главная
+					li.breadcrumbs--active
+						a(href="")
+							|  Отзывы
+			.reviews__sorting
+				label.select-wrap
+					span.label-text Сортировка:
+					select.js_select2(name='sort')
+						option Показать отзывы по брендам
+						option Показать отзывы по производителям
+				label.checkbox.black
+					input(type='checkbox', name='mattressType', value='1')
+					p.checkbox-text
+						span.dot
+						span.text Ортопедические пружинные
+				label.checkbox.black
+					input(type='checkbox', name='mattressType', value='2')
+					p.checkbox-text
+						span.dot
+						span.text Ортопедические беспружинные
+				label.checkbox.black
+					input(type='checkbox', name='mattressType', value='3')
+					p.checkbox-text
+						span.dot
+						span.text Скрученные
+				label.checkbox.black
+					input(type='checkbox', name='mattressType', value='4')
+					p.checkbox-text
+						span.dot
+						span.text Детские
+			.reviews__list
+				- for (var x=0; x<4; x++)
+					.reviews__item.clearfix
+						.product-item
+							.prod-img
+								img(src="img/item-1.jpg", alt="")
+							.prod-dscr
+								span.dscr
+									| Экстра Мини
+									span / Матрас
+							.prod-price
+								span
+									| От 8 660 руб.
+							.prod-controls
+								ul
+									li
+										a(href="#")
+											img(src="img/star.png", alt="")
+									li
+										a(href="#")
+											img(src="img/left-right.png", alt="")
+						.review__content
+							.review__product Матрас Lonax Tiger
+							p.review__title Отзывы покупателей:
+							ul.review__block
+								li.review__line
+									p.author 23.11.2016, Елена:
+									.context
+										p Матрас очень клевый. Покупала для ребенка 9 лет. Абсолютно не прогибается.
+										p Умеренно жесткий. Теперь поменяю и себе матрас на такой
+								li.review__line
+									p.author 26.10.2015, Валерий:
+									.context Отличный матрас!
+								li.review__line
+									p.author 26.10.2015, Валерий:
+									.context Нормальный магазин. Спасибо, все хорошо! Получил все вовремя в лучшем виде!
+								a(href='#').more__reviews Смотреть все отзывы
+									span.fa.fa-angle-down
+			.pagination
+				ul
+					li.pagination--active
+						a(href="#") 1
+					li
+						a(href="#") 2
+					li
+						a(href="#") 3
+					li
+						a(href="#") →
+					li
+						a(href="#") Показать еще
+		.reviews__form-wrap
+			.container
+				h2.title Хотите поделиться впечатлениями от покупки? <br> Оставьте свой комментарий!
+				form.reviews__form
+					.fiels-wrap.clearfix
+						.left-side
+							input(type='text' placeholder='Ваше имя')
+							input(type='text' placeholder='E-mail')
+							input(type='text' placeholder='Возраст')
+						.right-side
+							textarea(name='text')
+					button(type='submit').submit Отправить
+

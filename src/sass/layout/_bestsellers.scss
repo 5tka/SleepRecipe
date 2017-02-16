@@ -128,6 +128,21 @@
         }
     }
 }
+.product-item--sale {
+    .prod-img {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            background: url("../img/sale.png");
+            background-repeat: no-repeat;
+            width: 62px;
+            height: 63px;
+            left: 15px;
+            bottom: 50px;
+        }
+    }
+}
 .prod-dscr {
     margin-bottom: 17px;
     font-size: 13px;

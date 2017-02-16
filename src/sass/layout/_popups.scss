@@ -1,0 +1,169 @@
+.popup__form {
+	box-shadow: 2.868px 4.096px 19px 0px rgba(0, 0, 0, 0.2);
+	display: none;
+	position: relative;
+	max-width: 448px;
+	width: 100%;
+	min-width: 320px;
+	.b-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 10px;
+		cursor: pointer;
+		font-size: 14px;
+		span {
+			font-size: 0;
+		}
+		@extend .fa;
+		@extend .fa-close;
+		color: #fff;
+	}
+	.title-consultation {
+		font-weight: 700;
+		color: #fff;
+		background-color: $pink;
+		min-height: 78px;
+		line-height: 78px;
+		padding: 0 40px;
+		font-size: 16px;
+		span {
+			text-transform: uppercase;
+			vertical-align: middle;
+			line-height: 18px;
+			display: inline-block;
+		}
+		.big {
+			text-transform: uppercase;
+			font-size: 22px;
+		}
+		.inner {
+			padding: 20px 0;
+			vertical-align: middle;
+			> * {
+				line-height: normal;
+			}
+		}
+		.subtext {
+			font-weight: 400;
+		}
+	}
+	.popup__inner-wrap {
+		padding: 26px 38px 48px;
+		background-color: #fff;
+	}
+	.textarea-wrap {
+		display: block;
+		margin-bottom: 28px;
+		.text {
+			color: #222;
+			font-size: 16px;
+			margin-bottom: 25px;
+		}
+	}
+	.consult__textarea {
+		height: 120px;
+	}
+	input,
+	textarea {
+		background-color: #fafafa;
+		border: 1px solid #cccccc;
+		color: #222;
+		font-size: 15px;
+		width: 100%;
+		display: block;
+		resize: none;
+		height: 40px;
+		padding: 12px;
+		&:focus {
+			outline: none;
+			border: 1px solid #b8b8b8;
+		}
+	}
+	input {
+		padding-right: 40px;
+	}
+
+	.input-wrap {
+		display: block;
+		margin-bottom: 10px;
+		position: relative;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+		.status {
+			@extend .fa;
+			// display: none;
+			position: absolute;
+			transition: opacity 0.5s;
+			top: 12px;
+			right: 20px;
+			opacity: 0;
+			&.fa-close {
+				color: $pink;
+				opacity: 1;
+			}
+			&.fa-check {
+				color: #71be24;
+				opacity: 1;
+			}
+		}
+	}
+	.inputs-wrap {
+		margin-bottom: 28px;
+	}
+	.consult__submit-wrap {
+		@include clearfix;
+	}
+	.reset {
+		float: left;
+		text-align: center;
+		width: 46%;
+		max-width: 165px;
+		display: block;
+		font-weight: 300;
+		font-size: 14px;
+		height: 42px;
+		padding: 12px 5px;
+		transition: background-image .25s;
+		color: #7393dc;
+		border-radius: 3px;
+		border: 1px solid #e3e3e3;
+		border-bottom-width: 3px;
+		background-image: -webkit-linear-gradient(90deg,#f3f3f3,#fafafa);
+		background-image: -ms-linear-gradient(90deg,#f3f3f3 0,#fafafa 100%);
+	}
+	.submit {
+		float: right;
+		text-align: center;
+		width: 46%;
+		max-width: 165px;
+		display: block;
+		font-weight: 300;
+		font-size: 14px;
+		height: 42px;
+		padding: 12px 15px;
+		transition: background-image .25s;
+		color: #fff;
+		border-radius: 3px;
+		background-image: -webkit-linear-gradient(90deg,#f15f76,#f46f84);
+		background-image: -ms-linear-gradient(90deg,#f15f76 0,#f46f84 100%);
+		border-bottom: 2px solid #dc5066;
+	    &:hover {
+			background-image: -webkit-linear-gradient(90deg,#dc566b,#f46f84);
+			background-image: -ms-linear-gradient(90deg,#dc566b 0,#f46f84 100%);
+	    }
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.popup__form {
+		.title-consultation {
+			padding: 0 15px	;
+		}
+		.popup__inner-wrap {
+			padding: 26px 15px;
+		}
+
+	}
+}
