@@ -14,7 +14,7 @@ $( document ).ready(function() { // начало document.ready
 
     $(window).on('resize', function(){
 
-        $('.mnu-item--active')            
+        $('.mnu-item--active')
             .find('.sub-list')
             .css('top', $('.mnu-item--active')
                 .position().top + $('.mnu-item--active')
@@ -210,7 +210,7 @@ $( document ).ready(function() { // начало document.ready
     });
     $('.non-standard-slider').bxSlider({
         slideWidth: 194,
-        slideMargin: 40,        
+        slideMargin: 40,
         // infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
@@ -223,7 +223,7 @@ $( document ).ready(function() { // начало document.ready
     $('.brands-slider').bxSlider({
         slideWidth: 80,
         slideMargin: 50,
-        // infiniteLoop: false,        
+        // infiniteLoop: false,
         hideControlOnEnd:!0,
         pager:!1,
         nextText:"",
@@ -275,7 +275,7 @@ function initialize() {
     //Объявляем массив с нашими местами и маркерами
     var markers = [],
         myPlaces = [];
-    //Добавляем места в массив 
+    //Добавляем места в массив
     myPlaces.push(new Place('ул. Свободы, д.29,ТЦ «Мебель России»', 55.83715, 37.45312, 'Москва'));
     //Теперь добавим маркеры для каждого места
     for (var i = 0, n = myPlaces.length; i < n; i++) {
