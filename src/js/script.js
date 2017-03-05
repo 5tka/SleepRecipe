@@ -198,8 +198,9 @@ $( document ).ready(function() { // начало document.ready
 
 /* ENd xeonalex*/
     $('.bestsellers-items').bxSlider({
-        slideWidth: 200,
+        slideWidth: 253,
         // infiniteLoop: false,
+        slideMargin: 40,
         hideControlOnEnd:!0,
         pager: false,
         nextText:"",

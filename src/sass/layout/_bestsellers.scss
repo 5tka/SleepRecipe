@@ -6,7 +6,8 @@
         width: 100% !important;
     }
     .bx-viewport {
-        max-height: 310px !important;
+        min-height: 310px !important;
+        max-height: 330px !important;
         padding:  {
             top: 5px;
             left: 5px;
@@ -139,7 +140,7 @@
             width: 62px;
             height: 63px;
             left: 15px;
-            bottom: 50px;
+            bottom: 15px;
         }
     }
 }

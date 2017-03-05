@@ -685,7 +685,9 @@
         }
     }
     .product-item {
-        width: 225px !important;
+        padding: 17px 10px !important;
+        width: 215px !important;
+        margin-right: 10px !important;
     }
 }
 @include breakpoint(320) {
@@ -709,8 +711,7 @@
         }
     }
     .product-item {
-        width: 285px !important;
-        margin-right: 0;
+        width: 270px !important;
     }
 
     .ns-slider {
