@@ -106,30 +106,38 @@
 		width: 50%;
 	}
 	.extended-block {
-		margin-bottom: 10px;
+		margin-top: 30px;
 		text-align: center;
 	}
 	.extended-link {
 		display: inline-block;
 		font-size: 15px;
-	    color: #7393dc;
+	    color: #4dacbb;
+	    &:hover {
+	    	text-decoration: underline;
+	    }
+	}
+	.non-stand {
+		font-size: 15px;
+		margin-right: 50px;
+	    color: #4dacbb;
 	    &:hover {
 	    	text-decoration: underline;
 	    }
 	}
 	.selectors-block {
 		@include border-radius(2px);
-		margin-left: 50px;
-		background-color: #dce2e8;
-		padding: 24px 30px 24px ;
-		width: 300px;
+		// margin-left: 50px;
+		// margin-top: 34px;
 		float: left;
-		.non-stand {
-			font-size: 15px;
-		    color: #7393dc;
-		    &:hover {
-		    	text-decoration: underline;
-		    }
+		.left-side {
+			float: left;
+			width: 50%;
+			padding-right: 10px;
+		}
+		.right-side {
+			float: left;
+			width: 50%;
 		}
 		.line {
 			margin-bottom: 10px;
@@ -149,6 +157,10 @@
 			.fr + .select2{
 				float: right;
 			}
+			.s_180 + .select2{
+				width: 180px !important;
+				max-width: 100%;
+			}
 		}
 		.s_fw + .select2 {
 			width: 100% !important;
@@ -157,10 +169,10 @@
 	.select2-container--default {
 		.select2-selection--single {
 			@include border-radius(3px);
-			border: 1px solid #c5cfd9;
+			border: 1px solid #d9d9d9;
 			padding-right: 26px;
 			.select2-selection__rendered{
-				color: #c5cfd9;
+				color: #a2a2a2;
 				padding: {
 					top: 9.5px;
 					bottom: 9.5px;
@@ -303,20 +315,28 @@
 	float: left;
 }
 .filters-wrap.main-filter {
-	padding: 30px 20px;
+	padding: 30px 44px;
 	.checkbox-block{
+		@include clearfix;
 		width: 100%;
 		margin-left: 0;
+		float: none;
+		margin-bottom: 36px;
 	}
+
+
 	.selectors-block {
-		display: inline-block;
+		@include clearfix;
+		display: block;
 		float: none;
 		text-align: left;
 	}
 	.selectors-wrapper {
+		margin-bottom: 28px;
 		text-align: center;
 		float: none;
 	}
+
 }
 
 
@@ -420,11 +440,42 @@
 			}
 		}
 		.selectors-wrapper {
-			display: inline-block;
-			text-align: left;
-			float: none;
+			margin-bottom: 13px;
 		}
 	}
+}
+@media screen and (max-width: 1020px) and (min-width:751px) {
+	.filters-wrap.main-filter {
+		.selectors-wrapper {
+			margin-bottom: 0;
+		}
+		.checkbox-block {
+			margin-bottom: 10px;
+		}
+		.selectors-block {
+			display: inline-block;
+			.right-side,
+			.left-side {
+				float: none;
+				width: 100%;
+			}
+		}
+		.submit-wrap {
+			margin-top: 0;
+		}
+		.extended-block {
+			margin-top: 10px;
+		}
+		.non-stand {
+			margin-right: 20px;
+		}
+	}
+}
+@media screen and (max-width: 910px) and (min-width:751px) {
+	.filters-wrap.main-filter {
+		padding: 12px 25px;
+	}
+
 }
 @media screen and (max-width: 900px) {
 	.filters-wrap {
@@ -518,14 +569,13 @@
 		width: 100%;
 	}
 	.filters-wrap.main-filter .selectors-wrapper {
-		width: 100%;
+		display: inline-block;
 	}
 	.filters-wrap {
 		padding: 30px 20px;
 	}
 	.filters-wrap .selectors-block {
 		width: 100%;
-		padding: 24px 20px 30px;
 	}
 	.search-filter-wrap .submit {
 	    margin-right: 10px;
@@ -534,17 +584,25 @@
 		width: 100%;
 		margin-bottom: 25px;
 	}
-
 	.filters-wrap .checkbox-block .line-block {
 		margin-bottom: 0;
 	}
+	.filters-wrap.main-filter .checkbox-block,
 	.filters-wrap .checkbox-block {
 		margin-bottom: 0;
+	}
+	.search-filter-wrap .submit-wrap {
+		margin-top: 0;
 	}
 	.filters-wrap.main-filter .checkbox-block .line-block .checkbox-wrap  {
 		margin-top: 0;
 		width: 100%;
 	}
+	.filters-wrap .selectors-block .right-side,
+	.filters-wrap .selectors-block .left-side {
+		width: 100%;
+	}
+
 	.filters-wrap.main-filter .checkbox-block .right-side,
 	.filters-wrap.main-filter .checkbox-block .left-side {
 		width: 100%;

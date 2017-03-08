@@ -119,6 +119,7 @@ gulp.task('sass-dev', function() {
 //Сжатие изображений
 gulp.task('img', function() {
   return gulp.src(path.src.img)
+    .pipe(changed(path.build.img))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
     .pipe(gulp.dest(path.build.img));
 });

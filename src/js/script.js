@@ -108,7 +108,7 @@ $( document ).ready(function() { // начало document.ready
     var init = 0;
     var filterObj = $('#container-filter');
     if (!filterObj.length) {
-        filterObj = $('#sub__cat-filter');
+        filterObj = $('#side__cat-filter');
     }
     $(window).resize(function(){
         if (document.documentElement.clientWidth>750 && filterObj.length) {
@@ -147,8 +147,10 @@ $( document ).ready(function() { // начало document.ready
         max: 1000,
         values: [ 100, 300 ],
         slide: function( event, ui ) {
-        $( "#js_sl_prise_from" ).val( ui.values[ 0 ]);
-        $( "#js_sl_prise_to" ).val(ui.values[ 1 ] );
+            var parent=$(this).closest('.js_sliderWrap');
+            console.log(parent);
+        parent.find( ".js_sl_prise_from" ).val( ui.values[ 0 ]);
+        parent.find( ".js_sl_prise_to" ).val(ui.values[ 1 ] );
       }
     });
 
@@ -193,7 +195,20 @@ $( document ).ready(function() { // начало document.ready
 
     $('.homepage__slider').bxSlider({});
     $('.js_select2').each(function(index, el) {
-        $(this).select2({});
+        if ($(this).hasClass('js_select2_gr')) {
+            $(this).select2({
+              dropdownParent: $('#js_dropdown_select'),
+              minimumResultsForSearch: 20
+            });
+            // $(this).on('select2:open', function(event) {
+            //     /* Act on the event */
+
+            // });
+            // $(this).select2({ containerCssClass : "error" });
+            // alert(1);
+            return false;
+        }
+        $(this).select2({minimumResultsForSearch: 20});
     });
 
 /* ENd xeonalex*/

@@ -1,7 +1,80 @@
-.sub__categories {
-	.container {
-		padding-bottom: 30px;
+#js_dropdown_select {
+	.select2-container--default .select2-results__option--highlighted[aria-selected] {
+		background-color: #9bccc4;
+		color: #fff;
 	}
+	.select2-results__option {
+		border-bottom: 1px solid #e6e9ed;
+		padding: 8px 6px;
+		color: #777777;
+	}
+
+}
+.product__list.hover__info {
+	.product-item {
+		padding: 0;
+		padding-bottom: 17px;
+		.prod-img {
+			padding-top: 17px;
+			position: relative;
+		}
+
+		>* {
+			padding: 0 20px;
+		}
+		&:hover {
+			.prod-details-block {
+				opacity: 1;
+				z-index: 1;
+			}
+		}
+	}
+	.prod-details-block {
+		line-height: normal;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.76);
+		transition: 0.4s;
+		color: #fff;
+		.prod-details-list {
+			margin: 20px auto 0;
+			max-width: 180px;
+			text-align: left;
+			font-size: 13px;
+			line-height: 25px;
+			max-height: 95px;
+			overflow-y: auto;
+			margin-bottom: 18px;
+			li {
+				@include clearfix;
+			}
+			.term {
+				float: left;
+				width: 50%;
+				color: #b8b8b8;
+			}
+			.data {
+				float: right;
+				width: 50%;
+			}
+		}
+		.prod-more {
+			display: block;
+			text-align: center;
+			color: #f46f84;
+			font-size: 14px;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+.with_sidebar {
 	.search-filter-wrap {
 		width: 270px;
 		float: left;
@@ -10,8 +83,13 @@
 		float: right;
 		width: calc(100% - 290px);
 	}
+}
+.sub__categories {
+	.container {
+		padding-bottom: 30px;
+	}
 	.pagination {
-		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 	.product__list {
 		@include clearfix;
@@ -25,9 +103,6 @@
 			// &:nth-of-type(3){
 			// 	margin-top: 5px;
 			// }
-			&:nth-of-type(3n) {
-				margin-right: 0;
-			}
 		}
 	}
 	.sort-wrap {
@@ -125,9 +200,11 @@
 	.filter_title {
 		font-size: 18px;
 	}
-	.search-filter-wrap {
-		background-color: #edeef0;
-	}
+
+}
+
+#side__cat-filter {
+	background-color: #edeef0;
 
 	.filter__accord-block {
 		border-top: 1px solid #e3e4e8;
@@ -247,34 +324,67 @@
 			}
 		}
 	}
-}
-	.subcateg__descr-block {
-		padding: 30px 15px 60px;
-		max-width: 970px;
-		margin: 0 auto;
-		font-size: 14px;
-		color: #777777;
-		line-height: 20px;
-		p {
-			text-indent: 30px;
+	.with_unit {
+		display: inline-block;
+		position: relative;
+		.slider_inp {
+			padding-right: 25px;
+			text-align: center;
+		}
+		.unit {
+			position: absolute;
+			top: 50%;
+			line-height: 1;
+			margin-top: -7px;
+			font-size: 14px;
+			right: 10px;
 		}
 	}
-	.subcateg__title {
-		font-size: 18px;
-		color: #222222;
-		margin-bottom: 10px;
+	.more__filters-link {
+		display: block;
+		color: #f46d82;
+		text-decoration: underline;
+		font-size: 14px;
+		margin-bottom: 20px;
 	}
+}
 
+
+.subcateg__descr-block {
+	padding: 30px 15px 60px;
+	max-width: 970px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: #777777;
+	line-height: 20px;
+	p {
+		text-indent: 30px;
+	}
+}
+.subcateg__title {
+	font-size: 18px;
+	color: #222222;
+	margin-bottom: 10px;
+}
+@media screen and (min-width: 1025px) {
+	.sub__categories {
+		.product__list .product-item {
+			&:nth-of-type(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
 @media screen and (max-width: 1024px) {
 	.sub__categories {
 		.product__list .product-item {
-			width: 48%;
+			width: 48% !important;
 			margin-right: 4%;
 			&:nth-of-type(2n) {
 				margin-right: 0;
 			}
 			&:nth-of-type(3n) {
-				margin-right: 4%;
+				// margin-right: 4%;
 			}
 		}
 	}
@@ -301,7 +411,7 @@
 	}
 }
 @media screen and (max-width: 750px) {
-	#sub__cat-filter {
+	#side__cat-filter {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -311,7 +421,7 @@
 			display: none;
 		}
 	}
-	.sub__categories  {
+	.with_sidebar  {
 		.content-side {
 			float: none;
 			width: 100%;
@@ -352,8 +462,8 @@
 	.sub__categories .sort-wrap {
 		margin-bottom: 15px;
 	}
-	.sub__categories .product__list .product-item {
-		width: 100%;
+	.with_sidebar .product__list .product-item {
+		width: 100% !important;
 		margin: 0;
 		margin-bottom: 20px;
 	}
