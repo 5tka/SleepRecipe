@@ -168,7 +168,7 @@
     li {
         @include transition(.25s);
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 5px;
         vertical-align: middle;
         filter: grayscale(1);
         &:last-child {
@@ -180,6 +180,8 @@
     }
     a {
         display: block;
+        width: 15px;
+        height: 15px;
     }
 }
 
@@ -262,6 +264,12 @@
         }
     }
 }
+@include breakpoint(700) {
+    .brands-slider .b-slider {
+        width: 180px !important;
+        text-align: center;
+    }
+}
 @include breakpoint(320) {
     .hits-items {
         .product-item {
@@ -272,5 +280,8 @@
                 margin-right: 0;
             }
         }
+    }
+    .brands-slider .b-slider {
+        width: 280px !important;
     }
 }

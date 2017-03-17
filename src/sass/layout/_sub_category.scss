@@ -20,7 +20,7 @@
 		}
 
 		>* {
-			padding: 0 20px;
+			padding: 0 18px;
 		}
 		&:hover {
 			.prod-details-block {
@@ -47,7 +47,7 @@
 			font-size: 13px;
 			line-height: 25px;
 			max-height: 95px;
-			overflow-y: auto;
+			// overflow-y: auto;
 			margin-bottom: 18px;
 			li {
 				@include clearfix;
@@ -153,6 +153,8 @@
 		}
 		.label-text {
 			margin-right: 15px;
+			margin-bottom: 5px;
+			display: block;
 		}
 		.view {
 			.label-text{
@@ -466,5 +468,25 @@
 		width: 100% !important;
 		margin: 0;
 		margin-bottom: 20px;
+	}
+}
+@include breakpoint(320){
+	.sub__categories .sort-wrap{
+		text-align: center;
+		.label-text{
+			display: block;
+			margin-right: 0;
+		}
+		.sorting{
+			margin-right: 0;
+		}
+		.amount {
+			margin-right: 0;
+		}
+	}
+	.sub__categories .sort-wrap .view label{
+		&:first-child{
+			margin-left: 0;
+		}
 	}
 }
