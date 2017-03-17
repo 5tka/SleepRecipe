@@ -99,6 +99,21 @@
         }
     }
 }
+.product-item--gift {
+    .prod-img {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            background: url("../img/gift.png");
+            background-repeat: no-repeat;
+            width: 96px;
+            height: 46px;
+            top: 10px;
+            left: 15px;
+        }
+    }
+}
 .product-item--new {
     .prod-img {
         position: relative;
