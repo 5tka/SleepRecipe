@@ -1,3 +1,6 @@
+.wrapper{
+    overflow-x: hidden;
+}
 .footer {
     .container {
         @include clearfix;
@@ -292,8 +295,8 @@
         }
     }
 }
-@include breakpoint(710){
-       .footer .subscribe-wrapper .subscribe-form {
+@include breakpoint(710) {
+    .footer .subscribe-wrapper .subscribe-form {
         margin-right: 0;
     }
     .footer .subscribe-wrapper {
@@ -329,10 +332,15 @@
         margin: auto;
     }
 }
-@include breakpoint(320) {
-    .footer__mnu-adaptive,
-    .social-list {
+@include breakpoint(500) {
+    .footer__mnu-line{
         text-align: center;
+    }
+    .footer__mnu-adaptive {
+        float: none;
+        width: 100%;
+    }
+    .social-list {
         float: none;
         width: 100%;
         a {

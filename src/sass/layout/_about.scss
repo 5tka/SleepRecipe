@@ -37,7 +37,13 @@
         margin-bottom: 20px;
     }
 }
-@include breakpoint(320) {
+@include breakpoint(650) {
+    .about-item {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+@include breakpoint(450) {
     .about-item {
         width: 100%;
     }

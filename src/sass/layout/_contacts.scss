@@ -114,6 +114,16 @@
         border-right: transparent;
     }
 }
+@include breakpoint(750){
+        .left-col,
+    .center-col {
+        width: 100% !important;
+        margin: 0 2.5% !important;
+    }
+    .left-col{
+        margin-bottom: 25px !important;
+    }
+}
 @include breakpoint(320) {
     .left-col,
     .center-col {

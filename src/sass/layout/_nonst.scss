@@ -162,6 +162,12 @@
         margin-bottom: 30px;
     }
 }
+@include breakpoint(600){
+    .non-standard-item{
+        width: 100%;
+        text-align: center;
+    }
+}
 @include breakpoint(320) {
     .non-standard-item {
         width: 100%;

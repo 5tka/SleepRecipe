@@ -268,11 +268,23 @@
         }
     }
 }
-@include breakpoint(610) {
+@include breakpoint(640) {
+    .acProd-item {
+        float: none;
+        width: 70%;
+        margin: 0 auto !important;
+        margin-bottom: 35px !important;
+        text-align: center;
+    }
+}
+@include breakpoint(450) {
+    .acProd-item {
+        width: 80%;
+    }
+}
+@include breakpoint(400) {
     .acProd-item {
         width: 100%;
-        margin: 0;
-        margin-bottom: 50px;
     }
 }
 @include breakpoint(320){
