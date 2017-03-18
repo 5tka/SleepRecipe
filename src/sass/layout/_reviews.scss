@@ -151,11 +151,40 @@
     .checkbox {
         margin: 10px 0;
     }
+    .reviews__item {
+        .product-item {
+            padding: 17px 10px!important;
+            width: 215px!important;
+            margin-right: 10px;
+        }
+    }
+    .review__content {
+        margin-left: 230px;
+    }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
+    .reviews__form {
+        .left-side {
+            margin-bottom: 10px;
+        }
+
+        .left-side,
+        .right-side {
+            float: none;
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .reviews__form {
+        padding: 20px 15px 20px;
+    }
     .reviews__item .product-item {
         float: none;
-        margin: 0 auto 15px;
+        margin: 0 auto 15px !important;
         display: block;
     }
     .review__content {

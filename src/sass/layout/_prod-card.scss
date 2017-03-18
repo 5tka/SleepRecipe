@@ -172,10 +172,12 @@
     color: #777;
 }
 .product__price {
+    vertical-align: middle;
     display: inline-block;
     width: 60%;
 }
 .product__storage {
+    vertical-align: middle;
     font-size: 15px;
     text-align: right;
     font-style: italic;
@@ -338,6 +340,22 @@
         margin: 0;
     }
 }
+@media screen and (max-width: 1024px) and (min-width: 752px){
+    .current__price {
+        width: 100%;
+    }
+    .product__price {
+        width: 50%;
+    }
+    .product__storage {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 752px){
+    .product__selector .info {
+        margin-left: 5px;
+    }
+}
 @media screen and (max-width: 751px) {
     .product-preview-wrap {
         .right-side {
@@ -355,6 +373,31 @@
     }
     .product-preview-wrap {
         margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .product__buttons {
+        .left-buttons {
+            margin-bottom: 18px;
+            @include clearfix;
+        }
+
+        .left-buttons,
+        .right-buttons {
+            width: 100%;
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+    .add__basket {
+        margin-right: 2%;
+    }
+
+    .add__basket,
+    .buylink__one-click {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
     }
 }
 @media screen and (max-width: 480px) {
@@ -391,8 +434,9 @@
         }
     }
     .prod-preview {
-        height: 180px;
-        line-height: 170px;
+        height: auto;
+        max-height: 300px;
+        line-height: 1;
     }
     .product__price {
         width: 100%;
@@ -406,22 +450,7 @@
             margin: 0;
         }
     }
-    .product__buttons {
-        .left-buttons {
-            margin-bottom: 18px;
-        }
 
-        .left-buttons,
-        .right-buttons {
-            width: 100%;
-            margin-right: 0;
-            text-align: center;
-        }
-    }
-    .add__basket,
-    .buylink__one-click {
-        display: inline-block;
-    }
     .prodCard-wrapper #product__tabs .tabs__item.ui-tab {
         float: none;
         width: 100%;
@@ -441,5 +470,21 @@
     .prodCard-wrapper .tabs__link {
         border-top: none;
         border-left: 3px solid #f5f5f5;
+    }
+}
+@media screen and (max-width: 380px) {
+    .add__basket, .buylink__one-click {
+        width: 195px;
+        display: block;
+        margin: 0 auto 12px;
+    }
+    .buylink__one-click {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 320px) {
+    .prod-preview {
+        height: 180px;
+        line-height: 170px;
     }
 }
