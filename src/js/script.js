@@ -66,6 +66,26 @@ $( document ).ready(function() { // начало document.ready
 
 
 /*xeonalex */
+    /* вызов селекта для тех блоков которые не принимают .js_select2 */
+    $('.js_select22').select2({minimumResultsForSearch: 20});
+
+    $('.js_select2').each(function(index, el) {
+        if ($(this).hasClass('js_select2_gr')) {
+            $(this).select2({
+              dropdownParent: $('#js_dropdown_select'),
+              minimumResultsForSearch: 20
+            });
+            // $(this).on('select2:open', function(event) {
+            //     /* Act on the event */
+
+            // });
+            // $(this).select2({ containerCssClass : "error" });
+            // alert(1);
+            return false;
+        }
+        $(this).select2({minimumResultsForSearch: 20});
+    });
+
     $('#js_nonstandar, .leavefeedback').click(function(event) {
         event.preventDefault();
         $('#popup_nonstandart').bPopup({
@@ -194,22 +214,7 @@ $( document ).ready(function() { // начало document.ready
     // });
 
     $('.homepage__slider').bxSlider({});
-    $('.js_select2').each(function(index, el) {
-        if ($(this).hasClass('js_select2_gr')) {
-            $(this).select2({
-              dropdownParent: $('#js_dropdown_select'),
-              minimumResultsForSearch: 20
-            });
-            // $(this).on('select2:open', function(event) {
-            //     /* Act on the event */
 
-            // });
-            // $(this).select2({ containerCssClass : "error" });
-            // alert(1);
-            return false;
-        }
-        $(this).select2({minimumResultsForSearch: 20});
-    });
 
 /* ENd xeonalex*/
     $('.bestsellers-items').bxSlider({
