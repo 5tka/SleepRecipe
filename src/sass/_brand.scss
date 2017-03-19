@@ -119,7 +119,11 @@
 		}
 	}
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
+	.brand-seria .bTitle-wrap .title,
+	.brand-seria .bTitle-wrap .watch-more{
+		float: none;
+	}
 	.brand-container {
 		.br-img {
 			width: 100%;
