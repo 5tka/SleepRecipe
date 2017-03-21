@@ -690,9 +690,6 @@
         width: 215px !important;
         margin-right: 10px !important;
     }
-}
-<<<<<<< HEAD
-@include breakpoint(750) {
     .header__750mnu .img-trigger{
         position: fixed;
         z-index: 999;
@@ -721,14 +718,16 @@
                     background: #f0f2f5;
                     // border-left: 2px solid #f46f84;
                     // border-right: 2px solid #f46f84;
-                    border-left: 2px solid transparent !important; 
+                    border-left: 2px solid transparent !important;
                     color: #787878;
                 }
                 a{
                     display: block;
                 }
             }
-=======
+        }
+    }
+}
 @include breakpoint(380) {
     .header__second-line {
         position: relative;
@@ -755,7 +754,6 @@
         .telTo {
             text-align: center;
             float: none;
->>>>>>> a2d1cd89e03a93a8dcefebf79eedf8b35476af91
         }
     }
 }
