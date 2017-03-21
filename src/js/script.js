@@ -194,6 +194,19 @@ $( document ).ready(function() { // начало document.ready
         });
         return false;
     });
+    $('.buylink__one-click').click(function(event) {
+        event.preventDefault()
+        /* Act on the event */
+        $('#popup_buyinone').bPopup({
+            opacity: 0.65
+        });
+        return false;
+    });
+
+    $('.categories .filter_title').click(function(event){
+        event.preventDefault();
+        $('.main-filter').stop(true).slideToggle('slow');
+    });
 
     $('.spiner_amount').spinner({
         spin: function( event, ui ) {

@@ -70,7 +70,8 @@
 	}
 	/* стили ячеек*/
 	.name {
-		width: 400px;
+		// width: 400px;
+		width: 500px;
 		min-width: 250px;
 	}
 	.amount {
@@ -83,7 +84,8 @@
 
 	}
 	.summ {
-		width: 130px;
+		// width: 130px;
+		width: 230px;
 		min-width: 90px;
 	}
 	.delivery {
@@ -254,7 +256,8 @@
 		}
 	}
 	.comment {
-	    height: 170px;
+	    // height: 170px;
+		height: 243px;
 	}
 	.submit__line{
 		margin-top: 22px;

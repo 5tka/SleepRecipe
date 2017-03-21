@@ -352,3 +352,9 @@
     }
 }
 
+@include breakpoint(450){
+    .rightReserved{
+        padding: 10px 0;
+        line-height: 20px;
+    }
+}

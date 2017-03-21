@@ -73,6 +73,16 @@
         width: 49.98%;
     }
 }
+@include breakpoint(481) {
+    .categories {
+        .filter_title {
+            cursor: pointer;
+        }
+        .main-filter {
+            display: none;
+        }
+    }
+}
 @media screen and (max-width: 379px) {
     .catalog__item {
         width: 100%;

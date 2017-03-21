@@ -162,10 +162,22 @@
         margin-bottom: 30px;
     }
 }
-@include breakpoint(600){
-    .non-standard-item{
+@include breakpoint(600) {
+    .non-standard-item {
         width: 100%;
         text-align: center;
+    }
+}
+@include breakpoint(550) {
+    .non-standard-exp .bx-wrapper {
+        max-width: 200px !important;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .brandsWrapper .bx-wrapper {
+        max-width: 180px !important;
+        margin: 0 auto;
+        overflow: hidden;
     }
 }
 @include breakpoint(320) {

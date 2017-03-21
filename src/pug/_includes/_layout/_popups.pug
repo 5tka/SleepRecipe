@@ -10,7 +10,7 @@
                         th.amount Количество
                         th.price Цена за 1 шт
                         th.summ Сумма
-                        th.delivery Доставка этого товара
+                        //- th.delivery Доставка этого товара
                         th.remove Удалить
                 tbody
                     tr.basket__item-line
@@ -24,7 +24,7 @@
                             input.spiner_amount(type='text' name='amount_01' value='1')
                         td.price 5 200 руб.
                         td.summ 5 200 руб.
-                        td.delivery 1 546 руб.
+                        //- td.delivery 1 546 руб.
                         td.remove
                             span.fa.fa-close
                     tr.basket__item-line
@@ -38,7 +38,7 @@
                             input.spiner_amount(type='text' name='amount_01' value='1')
                         td.price 5 200 руб.
                         td.summ 5 200 руб.
-                        td.delivery 1 546 руб.
+                        //- td.delivery 1 546 руб.
                         td.remove
                             span.fa.fa-close
         .basket__form-fields
@@ -59,8 +59,12 @@
                         input(type='text' name='tel')
                     label
                         p.text E-mail
-                            span.important *
+                            span.important
                         input(type='text' name='email')
+                    label
+                        p.text Адрес доставки
+                            span.important
+                        input(type='text' name='adress')
                 .right-side
                     label
                         textarea.comment(name='comment' placeholder='Поле для ввода комментария')
@@ -127,6 +131,24 @@
                 ico.status
             label.input-wrap
                 input.js_val(type='email' name='email' placeholder='E-mail')
+                ico.status
+        .consult__submit-wrap
+            button(type='reset').reset.js_reset Отмена
+            button(type='submit').submit Отправить
+.popup__form#popup_buyinone
+    .b-close
+        span Закрыть
+    .title-consultation
+        .inner
+            p.big Отправьте сообщение
+            p.subtext и с вами свяжутся в ближайшее время
+    form(action='#').popup__inner-wrap.js_valid-from
+        .inputs-wrap
+            label.input-wrap
+                input.js_val(type='text' name='name' placeholder='Ваше имя')
+                ico.status
+            label.input-wrap
+                input.js_val(type='email' name='text' placeholder='Ваш телефон')
                 ico.status
         .consult__submit-wrap
             button(type='reset').reset.js_reset Отмена
