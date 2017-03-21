@@ -691,6 +691,35 @@
         margin-right: 10px !important;
     }
 }
+@include breakpoint(380) {
+    .header__second-line {
+        position: relative;
+        z-index: 1;
+        border-bottom: none;
+        display: block;
+        min-height: auto;
+        margin-top: -30px;
+        .second-center,
+        .second-left {
+            display: none;
+        }
+        .second-right {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    .second-right {
+        .c-wrap {
+            display: block;
+            padding: 10px 0 22px;
+        }
+        .telTo {
+            text-align: center;
+            float: none;
+        }
+    }
+}
 @include breakpoint(320) {
     .header__drop-down {
         font-size: 16px;
