@@ -465,7 +465,7 @@
     }
     .filter-char {
         .checkbox-block {
-            width: 100% !important;
+            // width: 100% !important;
         }
     }
 }
@@ -527,7 +527,11 @@
         padding: 30px 25px;
     }
 }
-
+@include breakpoint(800){
+    .filters-wrap .checkbox-block{
+        width: 100% !important;
+    }
+}
 @media screen and (max-width:769px) {
     .filters-wrap.main-filter {
         .form__inner-wrap {
@@ -608,7 +612,7 @@
         }
     }
 }
-@include breakpoint(505) {
+@include breakpoint(520) {
     .filter-char {
         .select-size-wrap {
             display: none;

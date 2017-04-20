@@ -20,6 +20,13 @@ $( document ).ready(function() { // начало document.ready
                 .position().top + $('.mnu-item--active')
                 .outerHeight())
 
+
+    });
+
+    
+    $('.categories .filter_title').click(function(event){
+        event.preventDefault();
+        $('.main-filter').stop(true).slideToggle('slow');
     });
 
     $('.prod__preview-item').click(function (event) {
@@ -203,10 +210,6 @@ $( document ).ready(function() { // начало document.ready
         return false;
     });
 
-    $('.categories .filter_title').click(function(event){
-        event.preventDefault();
-        $('.main-filter').stop(true).slideToggle('slow');
-    });
 
     $('.spiner_amount').spinner({
         spin: function( event, ui ) {

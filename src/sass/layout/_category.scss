@@ -77,6 +77,20 @@
     .categories {
         .filter_title {
             cursor: pointer;
+            padding: 30px;
+            // font-size: 20px;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                background: url(../img/arrow-d.png);
+                width: 9px;
+                height: 5px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 25px;
+            }
         }
         .main-filter {
             display: none;
